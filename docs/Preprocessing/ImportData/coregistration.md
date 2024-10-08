@@ -2,7 +2,7 @@
 layout: default
 title: "3. Coregistration"
 parent: "1. Import Data"
-grand_parent: "MEG"
+grand_parent: "Preprocessing"
 nav_order: 3
 has_children: true
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: "2. kit2fiff"
 parent: "1. Import Data"
-grand_parent: "MEG"
+grand_parent: "Preprocessing"
 nav_order: 2
 has_children: true
 ---

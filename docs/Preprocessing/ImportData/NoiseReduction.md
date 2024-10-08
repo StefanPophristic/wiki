@@ -2,7 +2,7 @@
 layout: default
 title: "1. Noise Reduction"
 parent: "1. Import Data"
-grand_parent: "MEG"
+grand_parent: "Preprocessing"
 nav_order: 1
 has_children: False
 ---

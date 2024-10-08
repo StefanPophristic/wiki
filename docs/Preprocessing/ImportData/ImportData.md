@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Test
+title: "1. Import Data"
+parent: "Preprocessing"
+nav_order: 1
 has_children: true
-nav_order: 6
 ---
 
 # Code
@@ -16,4 +17,6 @@ nav_order: 6
 
 ---
 
-# TEST
+# Importing the data
+
+something

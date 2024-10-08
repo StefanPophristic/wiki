@@ -47,6 +47,11 @@ To download files from Terminal:
 scp -r NETID@greene.hpc.nyu.edu:hpc_path local_path
 ```
 
+For example:
+```
+scp -r /Users/sp6961/Documents/preprocessing/Participant_1 sp6961@greene.hpc.nyu.edu:/scratch/sp6961/preprocessing_data/participants/
+```
+
 ## Troubleshooting
 
 If you get an error message like this one:
@@ -70,7 +75,11 @@ If you are trying to transfer files from the server, and are getting a similar e
 ssh-keygen -R nellabny.psych.nyu.edu
 ```
 
-Marco Lai also recommends that if you have any "known_hosts problem", try:
+If you get the following error message:
+```
+Host greene.hpc.nyu.edu not found in /Users/NETID/.ssh/known_hosts
+```
+Try running the following line in the terminal. This loads the known hosts: 
 ```
 rm ~/.ssh/known_hosts
 ```
