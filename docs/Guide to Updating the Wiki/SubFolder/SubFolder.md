@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "SubFolder Land Page"
-parent: "Template"
+parent: "Guide to Updating the Wiki"
 nav_order: 1
 has_children: true
 ---

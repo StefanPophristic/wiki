@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Example Page"
-parent: "Template"
+parent: "Guide to Updating the Wiki"
 nav_order: 4
 has_children: false
 ---

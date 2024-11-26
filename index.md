@@ -3,6 +3,22 @@ title: Home
 layout: home
 ---
 
+# To Do:
+
+Boxuan + Julia:
+- Data collection section
+
+
+Preprocessing:
+- Simone
+- 
+
+Analyses:
+-
+
+# Home Page:
+
+
 
 Welcome to the NELLAB wiki!
 
