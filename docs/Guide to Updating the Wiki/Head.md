@@ -6,7 +6,6 @@ has_children: true
 ---
 
 # Guide to updating the wiki
-
 The lab wiki is created using [jekyll](https://jekyllrb.com/docs/installation/macos/), a program that takes markup files and uses specified layouts to create static websites. Using this gives full control over the content and layout of the website while still being able to update it with minimal effort and host it online for free. The website lives as a bunch of code stored on a github repo (currently owned by gituser @StefanPophristic). From the github repo, the website published online using gitpages.
 
 This pages takes you through how to edit the wiki.
@@ -89,6 +88,11 @@ Configuration file: /Users/stefan/Desktop/repos/wiki/_config.yml
 ```
 
 Copy over the url under `Server address` into your local browser, and you will be able to see all of the changes you've made! The cool thing is, if you make more edits with this url open, and refresh the page, they will be immediately reflected! This serves as a sandbox. Nobody can see any changes you make locally, so feel free to experiment and anything you like.
+
+If you are running this command for the first time, do this:
+```
+bundle exec jekyll serve
+```
 
 ## Publishing changes
 
