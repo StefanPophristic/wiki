@@ -1,7 +1,7 @@
 ---
 layout: default
 title: stats
-nav_order: 2
+nav_order: 7
 has_children: true
 ---
 
