@@ -9,7 +9,7 @@ has_children: false
 
 # Overview
 
-In a time domain analysis, you analyze how your signal develops over time. In a frequency domain, you can from which frequencies your signal is composed of. A time-frequency domain analysis mixes these two aspects of your signal together—mapping the power (amplitude squared) of your signal across frequency bands binned into sections of time. 
+In a time domain analysis, you analyze how your signal develops over time. In a frequency domain, you analyze which frequencies your signal is composed of. A time-frequency domain analysis mixes these two aspects of your signal together—mapping the power (amplitude squared) of your signal across frequency bands binned into sections of time.
 
 The standard analysis pipeline in our lab analyses data that looks something like this:
 

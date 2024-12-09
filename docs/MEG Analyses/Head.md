@@ -10,11 +10,14 @@ In this section we will describe and document some of the most commonly used ana
 # Time Domain
 
 ## ANOVA Models
-
 ## Linear Regression Models
-
 ## fROI and the Tarkiainen Localizer
 
+# Decoding
+
+Put very simply, decoding refers to the process of predicting the stimuli presented to participants. This is done by training a classifier (more on this below) to discriminate between the different categories using one set of neural data and testing its performance on a (typically different) set of neural data.
+
+Why is decoding an interesting tool? The ability of a classifier to correctly classify an input as, e.g., A or B tells us something about how a given stimulus is represented neurally in time and/or space. If decoding is successful, this allows us to say something about how a given variable is encoded in neural activity. Finally, decoding takes into account fine-grained patterns in the data, thus setting is apart from traditional univariate analyses which typically averages out such fine-grained patterns.
 
 # Time-Frequency Analyses
 
