@@ -9,11 +9,7 @@ has_children: false
 
 # Overview
 
-In a time domain analysis, you analyze how your signal develops over time. In a frequency domain, you can from which frequencies your signal is composed of. A time-frequency domain analysis mixes these two aspects of your signal together—mapping the power (amplitude squared) of your signal across frequency bands binned into sections of time. This line of methodologies is relatively new compared to time-domain analyses, so there aren't as many clear linking hypotheses between what changes in power (amplitude squared) of your signal in different frequency bands means. However, this type of analyses has clear benefits as: 1) the link between frequency bands and organization of neurons is easier to study, making a cleaner linking hypothesis between the biology and neural signal; 2) it unpacks the signal in a way that can reveal interesting statistically significant interactions that are washed away in a strictly time-domain analysis.
-
-This is a type of analysis that we as a lab don't use as much, as such this section will just give you an overview of the methods rather than implementational guidelines.
-
-**Merge above and below sections together**
+In a time domain analysis, you analyze how your signal develops over time. In a frequency domain, you can from which frequencies your signal is composed of. A time-frequency domain analysis mixes these two aspects of your signal together—mapping the power (amplitude squared) of your signal across frequency bands binned into sections of time. 
 
 The standard analysis pipeline in our lab analyses data that looks something like this:
 
@@ -29,6 +25,8 @@ Any neural signal can likewise be modeled by the sum of various sine waves via t
 Rather than focusing on the overall signal, a time frequency analysis focuses on the properties of the sine waves that make up the signal. Are there differences in the frequencies and amplitudes of these sine waves that are correlated with your experimental predictions?
 
 Despite the fact that this analysis focuses on the decomposed signal, it is still analyzing the exact same data. To make an analogy, let's say you ran a behavioral experiment where participants are asked to press a single button when they see a red object, and do nothing when they see a blue object. You only collect a single type of data: at what time point was the button pressed. Despite this simplicity, you can still analyze many aspects of this data: the response time (how quickly was the button pressed after seeing a red object), accuracy (how many mistakes were made), noise of the button presses (was the button pressed at any point prior to stimulus onset?), etc. These different aspects of the data can reveal different effects of your experiment, depending on what your research question is. However, regardless of which aspect of this data you analyze, you are still ultimately analyzing the same button presses. In much the same way, our brain data is a single signal, but analyzing the signal in its simple form, or in its equivalent sine-decomposed form can reveal aspects about the data that can help you answer more questions.
+
+This line of methodologies is relatively new compared to time-domain analyses, so there aren't as many clear linking hypotheses between what changes in power (amplitude squared) of your signal in different frequency bands means. However, this type of analyses has clear benefits as: 1) the link between frequency bands and organization of neurons is easier to study, making a cleaner linking hypothesis between the biology and neural signal; 2) it unpacks the signal in a way that can reveal interesting statistically significant interactions that are washed away in a strictly time-domain analysis.
 
 # Theoretical Overview
 
@@ -67,15 +65,70 @@ Tutorials:
 
 ## Morlet Wavelet
 
+Another way to move into the Time-Frequency domain is to convolve your signal with a morlet wavelet. Although conceptually a little more complicated, this method has two advantages over the short-time FFT: 1) because convolutions are continuous, they side-step the issue of edge artifacts; and 2) due to the complex formulation of a morlet wavelet, this method allows you to extract and analyze in-phase and out-of-phase parts of your signal at the same time.
+
+The basis of this method is a convolution, or computing the dot-product of every time point of your signal with a kernel, in this case the morlet wavelet. Conceptually, a convolution can be thought of as creating an output signal that represents two things: 1) the input **weighted** by the kernel; and 2) how much the input and the kernel have in common. If you are unfamiliar with a convolution the following resources are helpful:
+
+- [Analyzing Neural Time Series, Chapter 10](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+- [3Blue1Brown Youtube Tutorial](https://www.youtube.com/watch?v=KuXjwB4LzSA)
+
+A morlet wavelet analysis is a signal that is convolved with a morlet wavelet. A morlet wavelet is a function defined by multiplying a sine-wave and the gaussian distribution.
+
+<img src="../../images/TimeFreq_Analysis_MorletWavelet.png" alt="Time Frequency Analysis, Second Decomposition" style="width: 70%; height: auto;">
+
+Due its composition, this wavelet contains many properties that are helpful in a time-frequency domain. The first, and most important one, is that every Morlet wavelet is made out of a sine wave with a specific frequency. By convolving our signal with that wavelet, the result will be a signal attenuated by the frequency of the wavelet. In other words, the result will be a representation of how much our signal can be explained by a specific frequency. We can then convolve our signal with multiple wavelets that differ in frequencies, resulting in a representation of how much of the signal consists of each frequency.
+
+<img src="../../images/TimeFreq_Analysis_MorletConvolution.png" alt="Time Frequency Analysis, Morlet Convolutions" style="width: 100%; height: auto;">
+
+Like in the short-time FFT, we are loosing time-domain resolution when presenting frequency-domain information. However, because we are convolving with a distribution with **gaussian** properties continuously over time, we are smoothing over all of the time points of our data—resulting in a much smoother representation of the power (amplitude squared) of each frequency per time point.
+
+A final property about morlet wavelets is that they are often represented as a complex number—with a real and imaginary part. The real part represents power of frequencies of sine waves that are in-phase whereas the imaginary part represents power of frequencies of sine waves that are out-of-phase. This property of the convolution is more relevant for phase-coherence analyses which are not covered here.
+
+Running a Morlet-Wavelet convolution in MNE python is incredibly simple, and can be achieved with the following lines of code:
+
+```
+# Define frequencies for all morlet wavelets
+freqs = np.arange(0.5, 4, 0.2)
+
+# Define number of cycles
+n_cycles = freqs / 2
+
+# Apply Morlet wavelet transform (time-frequency analysis)
+power = mne.time_frequency.tfr_morlet(
+    data,
+    freqs=freqs,
+    n_cycles=n_cycles,
+    return_itc=False,
+    n_jobs=1
+)
+```
+
+A Morlet wavelet is always made by multiplying a Gaussian distribution with a Sine wave. The Gaussian distribution is always the same. So the above parameters are used to define the sine-wave. `freqs` is an array that defines the frequencies for each sine-wave that will create a distinct Morlet wavelet. The above code will create Morlet wavelets for frequencies: 0.5, 0.7, 0.9, 1.1, 1.3, .. 4.0. `n_cycles` defines the number of cycles each of the sine-waves will be (i.e. the length of the sine wave). Finally, the `mne.time_frequency.tfr_morlet()` function takes in these parameters, creates the corresponding Morlet wavelets, and convolves your data with each wavelet.
+
+You can convolve your entire data, each epoch individually, or an average of all epochs in a condition. However, note that convolving on the average of all epochs in a condition will cancel out any out-of-phase data from the result.
+
+Tutorials:
+- [Analyzing Neural Time Series, Chapter 12-13](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+- [Mike Cohen Youtube Tutorial](https://www.youtube.com/watch?v=wgRgodvU_Ms&list=PLn0OLiymPak2G__qvavn3T8k7R8ssKxVr&index=2)
 
 
+## Other Methods
 
-## Other
+There are other methods that you can use to turn your time-domain data to a time-frequency domain. Another popular one is a Hilbert-Transform and Bandpass-filtering or Multitapers. You can find relevant resources below.
 
-# MNE Code
+Tutorials:
+- [Analyzing Neural Time Series, Chapter 14: Bandpass Filtering and the Hilbert Transform](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+- [Analyzing Neural Time Series, Chapter 16: Multitapers](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+- [Analyzing Neural Time Series, Chapter 17: Less Commonly Used Time Frequency Decomposition Methods](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
 
 # Things to consider
 
-Baseline correction.
+Baseline filtering is important when doing any kind of Time-Frequency analysis. In general, a non-linear baseline filter is recommended, as these methods tend to exacerbate positive outliers—in part because the output is measured in power (frequency squared). Some good resources on considering which baseline correction to use are given below.
 
-# Troubleshooting
+- [Analyzing Neural Time Series, Chapter 18: Time Frequency Power and Baseline Correction](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+
+The MNE `.apply_baseline` function applies a linear baseline correction per epoch using the pre-stimulus onset time specified in the function.
+
+```
+epochs_condition1.apply_baseline(baseline=(-0.1, 0))
+```
