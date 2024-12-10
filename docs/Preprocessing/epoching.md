@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "2. Epoching"
+title: "3. Epoching"
 parent: "Preprocessing"
-nav_order: 2
+nav_order: 3
 has_children: false
 ---
 

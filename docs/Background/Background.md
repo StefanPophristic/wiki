@@ -5,6 +5,13 @@ nav_order: 2
 has_children: true
 ---
 
+# TO DO:
+- Create a "Getting setup section"
+- Jupyter Notebooks
+- Conda environments (+ relevant yaml files)
+- The server access
+- The HPC access
+
 
 # MEG
 
