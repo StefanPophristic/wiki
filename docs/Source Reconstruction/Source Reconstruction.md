@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Source Reconstruction"
-nav_order: 1
+nav_order: 5
 has_children: true
 ---
 
@@ -34,7 +34,7 @@ The inverse problem, on the other hand, aims to determine the neural sources tha
 
 The forward solution aims to answer the question: Given a specific neural activity pattern in the brain, how would the configuration of magnetic field that are picked up by the MEG sensors look like?
 
-To construct a forward model, we need 
+To construct a forward model, we need
 1. Representations of neural activity - typically modeled as dipoles (mathematical representations of current flow in the brain)
 2. Volume conduction models - how magnetic fields propagate through the different tissues of the brain and head.
 3. Location of the sensors relative to the head.
@@ -65,6 +65,6 @@ There are different approaches to address this problem, some of which we will di
 
 The goal of the minimum norm estimate is to estimate the distribution of neural sources in the brain that most likely produced the recorded sensor signals, while minimizing the overall spatial norm (the total amount of activity across all sources).
 
-## 
+##
 
 # File Organization

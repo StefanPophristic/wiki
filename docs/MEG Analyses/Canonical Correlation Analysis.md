@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Canonical Correlation Analysis"
-nav_order: 1
+parent: "MEG Analyses"
+nav_order: 5
 has_children: true
 ---
 
@@ -35,11 +36,11 @@ We can define:
 
 The objective is to maximize the correlation between **u** and **n**. Substituting **u = Xw** and **n = Yv**, this becomes:
 
-![](/cca/images/cca_1.png)
+![](../../images/cca/cca_1.png)
 
 with the constraint that the canonical variates **u** and **n** have unit variance:
 
-![](/cca/images/cca_2.png)
+![](../../images/cca/cca_2.png)
 
 where:
 - **C<sub>XX</sub>** is the covariance matrix of **X**
@@ -50,25 +51,25 @@ These constraints prevent trivial solutions (e.g., setting **w** and **v** to ze
 
 The objective function now can be written using Lagrangian multipliers, where we maximize the covariance between **u** and **n** while keeping the variances of **u** and **n** fixed to 1. Therefore, we effectively maximizing the normalized covariance, i.e. correlation.
 
-![](/cca/images/cca_3.png)
+![](../../images/cca/cca_3.png)
 
 where **λ<sub>1</sub>** and **λ<sub>1</sub>** are the Lagrangian multipliers enforcing the unit variance constraint for **u** and **n**, respectively.
 
 We can now take the derivatives of the Lagrangian with respect to **w**, **v**, **λ<sub>1</sub>** and **λ<sub>1</sub>** and set them to zero:
 
-![](/cca/images/cca_4.png)
+![](../../images/cca/cca_4.png)
 
 This simplifies to:
 
-![](/cca/images/cca_5.png)
+![](../../images/cca/cca_5.png)
 
 Now we can substitute for ****v**:
 
-![](/cca/images/cca_6.png)
+![](../../images/cca/cca_6.png)
 
 And rearrange:
 
-![](/cca/images/cca_7.png)
+![](../../images/cca/cca_7.png)
 
 We can use matrix multiplication to compute:
 
@@ -87,6 +88,3 @@ Now we can compute the canonical variates **u = Xw** and **n = Yv**.
 # Implementation
 
 There are implementation for CCA in [Python](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.CCA.html) and [MATLAB](https://www.mathworks.com/help/stats/canoncorr.html)
-
-
-
