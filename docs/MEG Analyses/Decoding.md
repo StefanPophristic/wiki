@@ -65,32 +65,42 @@ One can also do leave-one-trial-out validation to assess model performance when 
 ## Template script
 
 1. Read in epochs object:
-``epochs = epochs = mne.read_epochs('path/to/epochs/', preload = True)```
+```python
+epochs = epochs = mne.read_epochs('path/to/epochs/', preload = True)
+```
 
 2. Extract the data from the epochs object (shape: n_epochs, n_channels, n_times) and create integer labels from metadata. If data is PCA'ed, the data is already in the right shape:
 
-``X = epochs.get_data()
+```python
+X = epochs.get_data()
 le = LabelEncoder()
-y = le.fit_transform(epochs.metadata.category)``
+y = le.fit_transform(epochs.metadata.category)
+```
 
 3. Create the model; cross-validation should be 5 or more:
 
-``base_mdl = LogisticRegressionCV(cv=5, max_iter=1000) # LogisticRegressionCV automatically cross-validates for parameter tuning, but you can use any sklearn model here
+```python
+base_mdl = LogisticRegressionCV(cv=5, max_iter=1000) # LogisticRegressionCV automatically cross-validates for parameter tuning, but you can use any sklearn model here
 clf = make_pipeline(StandardScaler(),  base_mdl) # It's very important to scale the data (i.e., ensure that each channel has a mean of 0 and an SD of 1) as the model is sensitive to the scale of the channels—without scaling, channels with larger magnitudes will dominate the model. Note that anything added in the pipeline is fit to training data only.
-time_decod = SlidingEstimator(clf, scoring='accuracy', verbose=False) # Add everything to the SlindingEstimator for decoding over time``
+time_decod = SlidingEstimator(clf, scoring='accuracy', verbose=False) # Add everything to the SlindingEstimator for decoding over time
+```
 
 4. Fit the model and average the scores across folds:
 
-``cv_scores = cross_val_multiscore(time_decod, X, y, cv=5, n_jobs=n_jobs, verbose=False)
-mean_scores = cv_scores.mean(axis=0)``
+```python
+cv_scores = cross_val_multiscore(time_decod, X, y, cv=5, n_jobs=n_jobs, verbose=False)
+mean_scores = cv_scores.mean(axis=0)
+```
 
 5. Plot the results:
 
-``plt.plot(epochs.times, mean_scores, label='accuracy')
+```python
+plt.plot(epochs.times, mean_scores, label='accuracy')
 plt.axhline(0.5, color='k', linestyle='--', label='chance')
 plt.legend()
 plt.xlabel('Time (s)')
-plt.ylabel('Accuracy (%)')``
+plt.ylabel('Accuracy (%)')
+```
 
 NB: A good sanity check is to ensure that decoding scores are mostly at chance during the baseline (since the stimulus has not yet been presented). Note that chance level will depend on the number of categories you are classifying; if you are doing binary classification, chance is equal to 50%, ternary classification will have a chance level of 33%, etc.
 

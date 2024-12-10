@@ -1,11 +1,9 @@
 ---
 layout: default
 title: "HPC"
-parent: "MEG"
+parent: "Background"
 nav_order: 1
 ---
-
-
 
 # Code
 {: .no_toc }
@@ -79,7 +77,7 @@ If you get the following error message:
 ```
 Host greene.hpc.nyu.edu not found in /Users/NETID/.ssh/known_hosts
 ```
-Try running the following line in the terminal. This loads the known hosts: 
+Try running the following line in the terminal. This loads the known hosts:
 ```
 rm ~/.ssh/known_hosts
 ```
