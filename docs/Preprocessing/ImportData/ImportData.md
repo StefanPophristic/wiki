@@ -19,4 +19,4 @@ has_children: true
 
 # Importing the data
 
-something
+You have successfully run a participant in the MEG—congratulations! The next step is for you is to do some initial noise reduction (while still in the lab) and convert your files to the appropriate formats for further preprocessing steps.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Preprocessing"
-nav_order: 1
+nav_order: 4
 has_children: true
 ---
 
@@ -15,6 +15,15 @@ has_children: true
 {:toc}
 
 ---
+# TO DO:
+
+- Import Data: Simone
+- Temporal Filtering: Aline-Priscillia
+- Spatial Filtering (bad channel interpolation): Aline-Priscillia
+- ICA: Stefan
+- Epoching/Epoch Rejection: Simone
+
+
 
 # Preprocessing
 
@@ -27,10 +36,7 @@ has_children: true
 4. **Epoch Rejection**
 
 
-# High Level Information
+# Order of Preprocessing
 
-This is stuff you do before you get to your analyses. Here is the general overview. You can find a tutorial based on data in X part of the server. The tutorial will be commented so that you can follow along with the explanations here. 
-
-
-
+The preprocessing sections are given in order.
 # File Organization
