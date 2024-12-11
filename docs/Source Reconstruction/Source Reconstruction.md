@@ -65,7 +65,6 @@ There are different approaches to address this problem, some of which we will di
 
 The goal of the minimum norm estimate is to estimate the distribution of neural sources in the brain that most likely produced the recorded sensor signals, while minimizing the overall spatial norm (the total amount of activity across all sources).
 
-<<<<<<< HEAD
 In it's simplest form we want to find the inverse of the leddfield matrix H to get weights w to estimate the source:
 
 ![](/images/sr/sr_2.png)
@@ -98,6 +97,8 @@ For this we use spatial filtering technique that allows us to focus on a specifi
 
 We construct a spatial filter using the sensor-level data, the lead field matrix (which describes the mapping between source and sensor space), and the covariance matrix of the recorded data.
 
+![](/images/sr/sr_overview.png)
+
 We have a leadfield matrix (channels by spatial dimensions) for a single source (the leadfield matrix has three dimensions, because practically a dipole could be pointing in different directions, therefore we have to take into account the spatial orientation of it).
 
 ![](/images/sr/sr_6.png)
@@ -111,7 +112,4 @@ We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the
 ![](/images/sr/sr_8.png)
 
 Now, for a given location, applyinh LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
-=======
-##
->>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98
 
