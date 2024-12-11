@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Canonical Correlation Analysis"
-nav_order: 1
+nav_order: 8
 has_children: true
 ---
 
