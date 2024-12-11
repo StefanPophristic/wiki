@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Source Reconstruction"
-nav_order: 1
+nav_order: 5
 has_children: true
 ---
 
@@ -28,7 +28,7 @@ The forward problem involves predicting the magnetic fields measured by the sens
 
 The inverse problem, on the other hand, aims to determine the neural sources that generated the recorded magnetic fields. This problem is ill-posed, meaning there are infinitely many possible solutions, and it requires mathematical constraints and prior assumptions to estimate the most plausible source configuration.
 
-(insert picture here)
+![](/images/sr/sr_1.png)
 
 # Forward Modelling
 
@@ -65,6 +65,49 @@ There are different approaches to address this problem, some of which we will di
 
 The goal of the minimum norm estimate is to estimate the distribution of neural sources in the brain that most likely produced the recorded sensor signals, while minimizing the overall spatial norm (the total amount of activity across all sources).
 
-## 
+In it's simplest form we want to find the inverse of the leddfield matrix H to get weights w to estimate the source:
 
-# File Organization
+![](/images/sr/sr_2.png)
+
+Then, X = wY, where X is the source data on m channels.
+
+However, in practice we compute the minimum norm estimate considering the noise covariance of the channel and source matrix and adding regularization:
+
+![](/images/sr/sr_3.png)
+
+where
+
+![](/images/sr/sr_4.png)
+
+**Y** are the channel data
+**C<sup>1/2</sup>** is the inverse of the noise covariance matrix of the channels
+**R** is the covariance matrix of the sources
+**A** is the leadfield matrix (channels by sources)
+**λ** is a regularization parameter
+
+This gives us **X = wY**, which is the distribution of neural activiy that best fits the neural data while keeping the total current among sources minimal.
+
+## Linearly Constrained Minimum Variance Beamforming
+
+The goal of Linearly Constrained Minimum Variance Beamforming (LCMVB) is to localize brain activity by isolating neural signals originating from a specific region of interest while suppressing signals and noise from other regions. Here we try to solve the inverse problem one source at a time.
+
+![](/images/sr/sr_5.png)
+
+For this we use spatial filtering technique that allows us to focus on a specific brain region by adjusting weights to the sensor data in such a way that the signal from a target location is enhanced, while signals from other locations (such as noise) are suppressed.
+
+We construct a spatial filter using the sensor-level data, the lead field matrix (which describes the mapping between source and sensor space), and the covariance matrix of the recorded data.
+
+We have a leadfield matrix (channels by spatial dimensions) for a single source (the leadfield matrix has three dimensions, because practically a dipole could be pointing in different directions, therefore we have to take into account the spatial orientation of it).
+
+![](/images/sr/sr_6.png)
+
+We can formulate this as a linear constraint, where multiplying the weights with our leadfield matrix should give the identity matrix (supress every source except at one location in the brain).
+
+![](/images/sr/sr_7.png)
+
+We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the variance of the estimated signals for each source location.
+
+![](/images/sr/sr_8.png)
+
+Now, for a given location, applyinh LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
+
