@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "3. Epoching"
+title: "4. Epoching"
 parent: "Preprocessing"
-nav_order: 3
+nav_order: 4
 has_children: false
 ---
 
@@ -63,27 +63,37 @@ In MNE, epoching is done on a Raw object, which has preferably been filtered (if
 
 1.	Read in the Raw object:
 
-``raw = mne.io.read_raw_fif(‘path/to/your/raw/object’, preload = True)``
+```python
+raw = mne.io.read_raw_fif('path/to/your/raw/object', preload = True)
+```
 
 2.	Create a dictionary of event ids (i.e., your conditions!):
 
-``event_id = {‘conditionA’: 1, ‘conditionB’: 2}``
+```python
+event_id = {'conditionA': 1, 'conditionB': 2}
+```
 
 If you didn't create an informative trigger scheme or have more conditions than there are triggers, you can also create this dictionary based on your logfile. The exact implementation of this will depend on your experiment.
 
 3.	Identify events:
 
-``events = mne.find_events(raw, min_duration=0.002)``
+```python
+events = mne.find_events(raw, min_duration=0.002)
+```
 
 Here, min_duration helps you identify triggers sent to the MEG.
 
 4.	Pick only the MEG channels to create epochs:
 
-``picks_meg = mne.pick_types(raw.info, meg=True, eeg=False, eog=False, stim=False)``
+```python
+picks_meg = mne.pick_types(raw.info, meg=True, eeg=False, eog=False, stim=False)
+```
 
 5.	Create epochs:
 
-``epochs = mne.Epochs(raw, events, event_id = event_id, tmin=-0.1, tmax=0.8)``
+```python
+epochs = mne.Epochs(raw, events, event_id = event_id, tmin=-0.1, tmax=0.8)
+```
 
 Here tmin and tmax are, respectively, the beginning and end of your epochs.
 
@@ -93,14 +103,18 @@ If you're only missing one epoch, it is often because the first trigger wasn't r
 
 7. Align your logfile to your epochs:
 
-``epochs.metadata = logfile``
+```python
+epochs.metadata = logfile
+```
 
 It is also possible to assign the logfile directly to the metadata-attribute during epoch creation, but if you need to delete trials in your logfiles due to unrecorded triggers, it's easier to simply align the epochs and logfile after doing so.
 
 8. If you wish, you can plot the evoked response to see a visual 'summary' of the data:
 
-``evoked = epochs.average()
-fig_evo = evoked.plot_joint()``
+```python
+evoked = epochs.average()
+fig_evo = evoked.plot_joint()
+```
 
 ## Things to consider when creating epochs
 The above steps are the bare minimum required to create epochs; however, there are various parameters that you may consider when creating epochs.
@@ -115,8 +129,10 @@ Even after filtering and ICA, some epochs might still contain too much noise to 
 
 One approach is to simply automatically reject all epochs based on maximum peak-to-peak signal amplitude (i.e., the absolute difference between the lowest and highest signal value, calculated per channel) using the following piece of code:
 
-``reject = {'mag': 3e-12} # default value used for our NYC recording site
-epochs.drop_bad(reject)``
+```python
+reject = {'mag': 3e-12} # default value used for our NYC recording site
+epochs.drop_bad(reject)
+```
 
 Some people prefer this approach as it is not subject to individual researcher subjectivity; rather, epochs are dropped using an objective criterion.
 
@@ -128,11 +144,16 @@ One way to manually inspect and reject epochs is through the Eelbrain GUI. The s
 
 1.	Read in your epochs object:
 
-``epochs = mne.read_epochs('path/to/your/epochs/object’)``
+```python
+epochs = mne.read_epochs('path/to/your/epochs/object')
+```
 
 2.	Open the Eelbrain GUI by running:
-``eelbrain.gui.select_epochs(epochs, vlim=3e-12)
-eelbrain.gui.run(block=True)``
+
+```python
+eelbrain.gui.select_epochs(epochs, vlim=3e-12)
+eelbrain.gui.run(block=True)
+```
 
 3.	Click through the epochs and click on the ones that you wish to reject. A rejected epoch will have a big red cross on them.
 
@@ -140,13 +161,17 @@ eelbrain.gui.run(block=True)``
 
 5.	Load in the pickled file with rejected epochs:
 
-``rejfile = eelbrain.load.unpickle(‘path/to/your/rejfile.pickle’)``
+```python
+rejfile = eelbrain.load.unpickle('path/to/your/rejfile.pickle')
+```
 
 6.	Run the following piece of code to reject the identified epochs and save the remaining epochs:
 
-``good = rejfile['accept'].x
+```python
+good = rejfile['accept'].x
 epochs_good = epochs[good]
-epochs_good.save(‘path/to/your/saved/epochs’)``
+epochs_good.save('path/to/your/saved/epochs')
+```
 
 
 ## Other reasons to reject epochs
@@ -155,7 +180,9 @@ At this point, you have epoched your data and it should be relatively clean. Wha
 
 If you have a factorial design, chances are that you will run a repeated measures ANOVA (rmANOVA) on the aggregated dataset from all subjects. While rmANOVAs don’t require a strictly balanced design, i.e., with an equal number of trials per conditions, a balanced design is ideal for simplicity and statistical power. One way to ensure a balanced design is to equalize the number of trials per condition for each subject. This is straightforwardly done with the following piece of code:
 
-``epochs, eq_ids = epochs.equalize_event_counts(event_ids=event_id)``
+```python
+epochs, eq_ids = epochs.equalize_event_counts(event_ids=event_id)
+```
 
 Which epochs are removed is determined by the following (from MNE Python: https://mne.tools/stable/generated/mne.Epochs.html#mne.Epochs.equalize_event_counts)
 

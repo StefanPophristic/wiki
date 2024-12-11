@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "2. ICA"
+title: "3. ICA"
 parent: "Preprocessing"
-nav_order: 2
+nav_order: 3
 has_children: false
 ---
 
@@ -27,7 +27,7 @@ This section is organized as follows: The **Theoretical Background** goes over w
 
 ICA is applied to a `raw` object, in other words your raw data. The following three lines of code fit and plot the ICA:
 
-```
+```python
 # Generate ICA model
 ica = mne.preprocessing.ICA(n_components=0.95, method='fastica',random_state=1119)
 
@@ -41,7 +41,7 @@ The second line of code fits the ICA model to your data. Note that this can take
 
 
 The next step is to visualize your components and select the ones that you will removing. This is done with the following two lines of code:
-```
+```python
 # Visualize and select components to remove
 ica.plot_sources(raw)
 ica.plot_components()
@@ -79,7 +79,7 @@ Generally we avoid getting rid of bad channel components, in order to avoid gett
 
 ## Considerations  
 
-```
+```python
 ica.fit(raw, reject={'mag':5e-12}, reject_by_annotation=True)
 ```
 There are two additional parameters that can be included in your ica.fit(): `reject={'mag':5e-12}` and `reject_by_annotation=True`. The first automatically rejects any epochs that exceed an amplitude of `5e-12` Tesla and the second excludes any sections of the data that were manually annotated as "bad". The addition of either of these two parameters is unnecessary and varies from researcher to researcher in the lab. Fellow lab members give the following considerations:

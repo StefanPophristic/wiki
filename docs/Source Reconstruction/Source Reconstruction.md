@@ -34,7 +34,7 @@ The inverse problem, on the other hand, aims to determine the neural sources tha
 
 The forward solution aims to answer the question: Given a specific neural activity pattern in the brain, how would the configuration of magnetic field that are picked up by the MEG sensors look like?
 
-To construct a forward model, we need 
+To construct a forward model, we need
 1. Representations of neural activity - typically modeled as dipoles (mathematical representations of current flow in the brain)
 2. Volume conduction models - how magnetic fields propagate through the different tissues of the brain and head.
 3. Location of the sensors relative to the head.
@@ -65,6 +65,7 @@ There are different approaches to address this problem, some of which we will di
 
 The goal of the minimum norm estimate is to estimate the distribution of neural sources in the brain that most likely produced the recorded sensor signals, while minimizing the overall spatial norm (the total amount of activity across all sources).
 
+<<<<<<< HEAD
 In it's simplest form we want to find the inverse of the leddfield matrix H to get weights w to estimate the source:
 
 ![](/images/sr/sr_2.png)
@@ -110,4 +111,7 @@ We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the
 ![](/images/sr/sr_8.png)
 
 Now, for a given location, applyinh LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
+=======
+##
+>>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98
 

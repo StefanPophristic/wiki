@@ -86,7 +86,7 @@ A final property about morlet wavelets is that they are often represented as a c
 
 Running a Morlet-Wavelet convolution in MNE python is incredibly simple, and can be achieved with the following lines of code:
 
-```
+```python
 # Define frequencies for all morlet wavelets
 freqs = np.arange(0.5, 4, 0.2)
 
@@ -129,6 +129,6 @@ Baseline filtering is important when doing any kind of Time-Frequency analysis. 
 
 The MNE `.apply_baseline` function applies a linear baseline correction per epoch using the pre-stimulus onset time specified in the function.
 
-```
+```python
 epochs_condition1.apply_baseline(baseline=(-0.1, 0))
 ```

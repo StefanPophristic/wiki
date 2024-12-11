@@ -23,3 +23,6 @@ defaults:
 
 includes:
   - css/custom.css
+
+markdown: kramdown
+highlighter: rouge
