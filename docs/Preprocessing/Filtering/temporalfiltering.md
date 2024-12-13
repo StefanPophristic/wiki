@@ -30,10 +30,10 @@ The [Time frequency](wiki/docs/MEG Analyses
 When we filter our data, we are modifying characteristics of our data in the frequency domain. See below an image of raw MEG data in the time domain vs the (filtered) power spectrum of the same data:
 
 ##### Raw data
-![rawdata](/Volumes/Server/NEUROLING/PersonalFiles/Aline-Priscillia Messi/megmethods/wiki/raw_data.png)
+![rawdata](../../../images/Filtering/raw_data.png)
 
 ##### Power spectrum
-![power](/Volumes/Server/NEUROLING/PersonalFiles/Aline-Priscillia Messi/megmethods/wiki/powerraw.png)
+![rawdata](../../../images/Filtering/powerraw.png)
 
 
 ## Finite vs Infinite response filters
@@ -55,7 +55,7 @@ We can also define filters based on what they do to the data. Below are common f
 - **Brickwall**: not recommended; reconstructing a signal from only a subset of frequencies after using a FFT/DFT  
 
 ### Notes on analysis
-When analyzing MEEG data we typically apply a bandpass FIR filter from 1 to 40hz. The lowpass 40hz filter removes high frequency artifacts and in this case removes electrical line noise (which is 50hz in the US), while the highpass 1hz filter minimizes slow drifts that are present in the data.
+When analyzing MEEG data we typically apply a bandpass FIR filter from 1 to 40hz. The lowpass 40hz filter removes high frequency artifacts and in this case removes electrical line noise (which is 60hz in the US), while the highpass 1hz filter minimizes slow drifts that are present in the data.
 
 Data always needs to be filtered twice (once forwards and another backwards) with the same filter kernel in order to avoid phase shifts in the data. This is usually done automatically.
 
@@ -64,7 +64,7 @@ Because of the time/frequency tradeoff, it is better to filter the raw data befo
 Artifacts in the time domain can be seen through bandpass and stopband **ripples** after a filter has been applied. These are just small fluctuations in the amplitude of each band.
 
 ## Aliasing
-Since our data is sampled and not continunous, we need to pay extra attention to high frequency artifacts in the data. The **Nyquist frequency** (N = sampling rate/2) is our limit as any frequency above it will ==alias== as a lower frequency in our samples. Only frequencies which are a (integer) multiple of our sampling rate alias as lower ones.
+Since our data is sampled and not continunous, we need to pay extra attention to high frequency artifacts in the data. The **Nyquist frequency** (N = sampling rate/2) is our limit as any frequency above it will `alias` as a lower frequency in our samples. Only frequencies which are a (integer) multiple of our sampling rate alias as lower ones.
 
 So if our sampling rate is 1000hz, we at least need to apply a 500hz lowpass filter on our data to remove high frequency artifacts.  
 
@@ -155,7 +155,7 @@ raw_filt.compute_psd(fmax=40).plot()
 ## Baseline correction
 
 Both demeaning and detrending are arguments that are added when defining epochs.
-For the sake of this example, we'll find events and define epochs based on those events (See the [Epoching](wiki/docs/Preprocessing/epoching.md) section for more detail about how and why we do this).  
+For the sake of this example, we'll find events and define epochs based on those events (See the [Epoching](../epoching.html) section for more detail about how and why we do this).  
 
 ```python
 # find events based on triggers

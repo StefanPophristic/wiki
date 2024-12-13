@@ -22,13 +22,13 @@ has_children: false
 
 Raw MEEG data is at its core a **channel x time** matrix which is extremely malleable. Spatial filtering represents the output as a weighted transformation of the input but instead of manipulating temporal information, we are transforming the data by manipulating the information across channels.
 
-Spatial filtering methods include: interpolation, PCA, [ICA](wiki/docs/Preprocessing/ICA.md), re-referencing (for EEG data only) and even [source reconstruction](wiki/docs/Source Reconstruction/Head.md)! Only the first two will be covered here.  
+Spatial filtering methods include: interpolation, PCA, [ICA](../ICA.html), re-referencing (for EEG data only) and even [source reconstruction](../../Source%20Reconstruction/Source%20Reconstruction.html)! Only the first two will be covered here.  
 
 ## Interpolation
 The easiest spatial transformation is interpolation.
 After annotating bad epochs and leafing through your raw data, you'll notice that some channels are bad.
 
-![intermatrix](/Volumes/Server/NEUROLING/PersonalFiles/Aline-Priscillia Messi/megmethods/wiki/badchan.png)
+![intermatrix](../../../images/Filtering/badchan.png)
 
 For the MEG, ``MEG 079`` is always a bad channel and ``MEG 014`` tends to be bad.
 
@@ -36,7 +36,7 @@ We usually remove bad channels as these are obvious sources of noise that worsen
 
 Here is what the matrix for interpolating a bad channel as the average of the two neighboring channels would look like:
 
-![intermatrix](/Volumes/Server/NEUROLING/PersonalFiles/Aline-Priscillia Messi/megmethods/wiki/interpolatedchan.png)
+![intermatrix](../../../images/Filtering/interpolatedchan.png)
 
 In the above code, channel 5 has been removed and replaced as the weighted sum of channels 4 and 6.
 
@@ -85,7 +85,7 @@ One advantage of using PCA is that our components are uncorrelated with each oth
 
 Each MEEG channel is a weighted sum of our components. Each weight tells us how much each component contributes to overall activity in each channel.
 
-![pcamat](/Volumes/Server/NEUROLING/PersonalFiles/Aline-Priscillia Messi/megmethods/wiki/pcamatrix.png)
+![pcamat](../../../images/Filtering/pcamatrix.png)
 
 The inverse is true: components are a weighted sum of the activity across channels. PCA highlights the most significant patterns of activity across channels by finding linear combinations of channels that maximizes different degrees of variance.   
 

@@ -36,19 +36,18 @@ We can define:
 
 The objective is to maximize the correlation between **u** and **n**. Substituting **u = Xw** and **n = Yv**, this becomes:
 
-<<<<<<< HEAD:docs/Canonical Correlation Analysis/Canonical Correlation Analysis.md
-![](/images/cca/cca_1.png)
+<img src="../../images/cca/cca_1.png" alt="CCA Equation 1" style="width: 30%; height: auto;">
 
 with the constraint that the canonical variates **u** and **n** have unit variance:
 
-![](/images/cca/cca_2.png)
-=======
-![](../../images/cca/cca_1.png)
+<img src="../../images/cca/cca_2.png" alt="CCA Equation 2" style="width: 37%; height: auto;">
+
+<img src="../../images/cca/cca_1.png" alt="CCA Equation 1" style="width: 30%; height: auto;">
 
 with the constraint that the canonical variates **u** and **n** have unit variance:
 
-![](../../images/cca/cca_2.png)
->>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98:docs/MEG Analyses/Canonical Correlation Analysis.md
+<img src="../../images/cca/cca_2.png" alt="CCA Equation 2" style="width: 37%; height: auto;">
+
 
 where:
 - **C<sub>XX</sub>** is the covariance matrix of **X**
@@ -59,45 +58,42 @@ These constraints prevent trivial solutions (e.g., setting **w** and **v** to ze
 
 The objective function now can be written using Lagrangian multipliers, where we maximize the covariance between **u** and **n** while keeping the variances of **u** and **n** fixed to 1. Therefore, we effectively maximizing the normalized covariance, i.e. correlation.
 
-<<<<<<< HEAD:docs/Canonical Correlation Analysis/Canonical Correlation Analysis.md
 ![](/images/cca/cca_3.png)
-=======
+
 ![](../../images/cca/cca_3.png)
->>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98:docs/MEG Analyses/Canonical Correlation Analysis.md
 
 where **λ<sub>1</sub>** and **λ<sub>1</sub>** are the Lagrangian multipliers enforcing the unit variance constraint for **u** and **n**, respectively.
 
 We can now take the derivatives of the Lagrangian with respect to **w**, **v**, **λ<sub>1</sub>** and **λ<sub>1</sub>** and set them to zero:
 
-<<<<<<< HEAD:docs/Canonical Correlation Analysis/Canonical Correlation Analysis.md
-![](/images/cca/cca_4.png)
+<img src="../../images/cca/cca_4.png" alt="CCA Equation 4" style="width: 50%; height: auto;">
+
 
 This simplifies to:
 
-![](/images/cca/cca_5.png)
+<img src="../../images/cca/cca_5.png" alt="CCA Equation 5" style="width: 40%; height: auto;">
 
 Now we can substitute for ****v**:
 
-![](/images/cca/cca_6.png)
+<img src="../../images/cca/cca_6.png" alt="CCA Equation 6" style="width: 60%; height: auto;">
 
 And rearrange:
 
-![](/images/cca/cca_7.png)
-=======
-![](../../images/cca/cca_4.png)
+<img src="../../images/cca/cca_6.png" alt="CCA Equation 6" style="width: 60%; height: auto;">
+
+<img src="../../images/cca/cca_4.png" alt="CCA Equation 4" style="width: 50%; height: auto;">
 
 This simplifies to:
 
-![](../../images/cca/cca_5.png)
+<img src="../../images/cca/cca_5.png" alt="CCA Equation 5" style="width: 40%; height: auto;">
 
 Now we can substitute for ****v**:
 
-![](../../images/cca/cca_6.png)
+<img src="../../images/cca/cca_6.png" alt="CCA Equation 6" style="width: 60%; height: auto;">
 
 And rearrange:
 
-![](../../images/cca/cca_7.png)
->>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98:docs/MEG Analyses/Canonical Correlation Analysis.md
+<img src="../../images/cca/cca_7.png" alt="CCA Equation 7" style="width: 60%; height: auto;">
 
 We can use matrix multiplication to compute:
 
@@ -115,11 +111,4 @@ Now we can compute the canonical variates **u = Xw** and **n = Yv**.
 
 # Implementation
 
-<<<<<<< HEAD:docs/Canonical Correlation Analysis/Canonical Correlation Analysis.md
 There are implementations for CCA in [Python](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.CCA.html) and [MATLAB](https://www.mathworks.com/help/stats/canoncorr.html)
-
-
-
-=======
-There are implementation for CCA in [Python](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.CCA.html) and [MATLAB](https://www.mathworks.com/help/stats/canoncorr.html)
->>>>>>> 7987f06df070bce4383a95dde888eac8127f2a98:docs/MEG Analyses/Canonical Correlation Analysis.md

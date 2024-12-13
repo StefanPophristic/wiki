@@ -21,11 +21,14 @@ nav_order: 1
 
 Underlying any frequency analysis of MEEG data, is the idea that the signal we are analyzing is composed of a mixture or sum of various sine waves. Below is a pure sine wave:
 
-![sine](puresine.png)
+<center>
+<img src="../../images/Filtering/puresine.png" alt="Sine Wave" style="width: 50%; height: auto;">
+</center>
 
 (Small reminder: We define a frequency **f** as the number of cycles per second. The amplitude **A** of a given frequency is a measure of its magnitude or strength compared to 0, power is simply amplitude squared, and phase $\theta$ is the timing of the wave measured in radians.)
 
 And this is its basic formula for any timepoint t:
+
 $$
 Asin(2 \pi ft + \theta)
 $$
@@ -35,7 +38,7 @@ Now compare it to this signal from one MEG sensor:
 
 Though the second wave seems really different from the first, it’s possible to reconstruct wave #2 by adding together sine waves of different frequencies and amplitudes. <!-- (NOTE TO EDITOR: maybe add same image as the time frequency section?)-->
 
-In order to deconstruct or unmix a complex signal into smaller sine waves, we apply a ==Fourier Transform==. <!-- the previous text should show up as highlighted text; relace with bold if not--> The output of a Fourier Transform is a **Fourier Series**: a series of complex numbers where each number corresponds to a frequency. We can then use this series to get more information about the characteristics of each frequency in our data. The intricacies of time-frequency analysis will be covered in another chapter.
+In order to deconstruct or unmix a complex signal into smaller sine waves, we apply a `Fourier Transform`. <!-- the previous text should show up as highlighted text; relace with bold if not--> The output of a Fourier Transform is a **Fourier Series**: a series of complex numbers where each number corresponds to a frequency. We can then use this series to get more information about the characteristics of each frequency in our data. The intricacies of time-frequency analysis will be covered in another chapter.
 
 ### Complex numbers, sine and cosine
 
@@ -43,9 +46,12 @@ Before getting to the fourier transform, we need to take a quick shortcut throug
 
 Think of a unit circle of radius 1 and circumference 2 $\pi$.
 See an image of the unit circle below:
-![unitcircle](unitcircle.png)
 
-Thanks to [Euler’s formula] (https://mathvault.ca/euler-formula/), we can move between cosine and sine and complex numbers, and importantly express sine waves as complex numbers.
+<center>
+<img src="../../images/Filtering/unitcircle.png" alt="Unit Circle" style="width: 70%; height: auto;">
+</center>
+
+Thanks to [Euler’s formula](https://mathvault.ca/euler-formula/), we can move between cosine and sine and complex numbers, and importantly express sine waves as complex numbers.
 
 Referring back to the unit circle, *cos* represents the x axis and *sin* the y axis; thinking in terms of the formula, *cos* represents the real part of a complex number and *sin* represents the imaginary part of a complex number.
 
@@ -65,7 +71,7 @@ Here $X_K$ is our data for a frequency *k*, at sample point *n* out of *N* sampl
 
 For each complex number corresponding to a frequency, **phase** is the angle of the complex number, **amplitude** is its absolute value and **power** is: $real^2+imag^2$ (sum of the squares of the real and imaginary parts).
 
-Because our data is sampled and not continuous, we need to take this into account when deconstructing and reconstructing it using its Fourier series. We can only (de/re)construct the signal up to its **Nyquist frequency** (which we determine based on the sampling frequency). Any frequency above it will be a "negative" frequency. (See [Aliasing](wiki/docs/Preprocessing/Filtering/temporalfiltering.md#Aliasing) section for more information).
+Because our data is sampled and not continuous, we need to take this into account when deconstructing and reconstructing it using its Fourier series. We can only (de/re)construct the signal up to its **Nyquist frequency** (which we determine based on the sampling frequency). Any frequency above it will be a "negative" frequency. (See [Aliasing](../Preprocessing/Filtering/temporalfiltering.html#aliasing) section for more information).
 
 --------
 
