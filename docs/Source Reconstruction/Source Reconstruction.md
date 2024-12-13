@@ -28,7 +28,9 @@ The forward problem involves predicting the magnetic fields measured by the sens
 
 The inverse problem, on the other hand, aims to determine the neural sources that generated the recorded magnetic fields. This problem is ill-posed, meaning there are infinitely many possible solutions, and it requires mathematical constraints and prior assumptions to estimate the most plausible source configuration.
 
-![](/images/sr/sr_1.png)
+<center>
+<img src="../../images/sr/sr_1.png" alt="Forward and Inverse Problems for Source Reconstruction" style="width: 70%; height: auto;">
+</center>
 
 # Forward Modelling
 
@@ -65,19 +67,25 @@ There are different approaches to address this problem, some of which we will di
 
 The goal of the minimum norm estimate is to estimate the distribution of neural sources in the brain that most likely produced the recorded sensor signals, while minimizing the overall spatial norm (the total amount of activity across all sources).
 
-In it's simplest form we want to find the inverse of the leddfield matrix H to get weights w to estimate the source:
+In it's simplest form we want to find the inverse of the leadfield matrix H to get weights w to estimate the source:
 
-![](/images/sr/sr_2.png)
+<center>
+<img src="../../images/sr/sr_2.png" alt="Leadfield Equation" style="width: 30%; height: auto;">
+</center>
 
 Then, X = wY, where X is the source data on m channels.
 
 However, in practice we compute the minimum norm estimate considering the noise covariance of the channel and source matrix and adding regularization:
 
-![](/images/sr/sr_3.png)
+<center>
+<img src="../../images/sr/sr_3.png" alt="Minimum Norm Estimate Equation" style="width: 60%; height: auto;">
+</center>
 
 where
 
-![](/images/sr/sr_4.png)
+<center>
+<img src="../../images/sr/sr_4.png" alt="Minimum Norm Estimate Equation" style="width: 30%; height: auto;">
+</center>
 
 **Y** are the channel data
 **C<sup>1/2</sup>** is the inverse of the noise covariance matrix of the channels
@@ -91,25 +99,34 @@ This gives us **X = wY**, which is the distribution of neural activiy that best 
 
 The goal of Linearly Constrained Minimum Variance Beamforming (LCMVB) is to localize brain activity by isolating neural signals originating from a specific region of interest while suppressing signals and noise from other regions. Here we try to solve the inverse problem one source at a time.
 
-![](/images/sr/sr_5.png)
+<center>
+<img src="../../images/sr/sr_5.png" alt="Forward and Inverse Problems for Source Reconstruction" style="width: 90%; height: auto;">
+</center>
 
 For this we use spatial filtering technique that allows us to focus on a specific brain region by adjusting weights to the sensor data in such a way that the signal from a target location is enhanced, while signals from other locations (such as noise) are suppressed.
 
 We construct a spatial filter using the sensor-level data, the lead field matrix (which describes the mapping between source and sensor space), and the covariance matrix of the recorded data.
 
-![](/images/sr/sr_overview.png)
+<center>
+<img src="../../images/sr/sr_overview.png" alt="Source Reconstruction Overview" style="width: 90%; height: auto;">
+</center>
 
 We have a leadfield matrix (channels by spatial dimensions) for a single source (the leadfield matrix has three dimensions, because practically a dipole could be pointing in different directions, therefore we have to take into account the spatial orientation of it).
 
-![](/images/sr/sr_6.png)
+<center>
+<img src="../../images/sr/sr_6.png" alt="leadfield Variable" style="width: 20%; height: auto;">
+</center>
 
 We can formulate this as a linear constraint, where multiplying the weights with our leadfield matrix should give the identity matrix (supress every source except at one location in the brain).
 
-![](/images/sr/sr_7.png)
+<center>
+<img src="../../images/sr/sr_7.png" alt="Identity Matrix" style="width: 70%; height: auto;">
+</center>
 
 We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the variance of the estimated signals for each source location.
 
-![](/images/sr/sr_8.png)
+<center>
+<img src="../../images/sr/sr_8.png" alt="Identity Matrix" style="width: 80%; height: auto;">
+</center>
 
-Now, for a given location, applyinh LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
-
+Now, for a given location, applying LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
