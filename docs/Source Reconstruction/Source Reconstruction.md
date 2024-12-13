@@ -24,9 +24,9 @@ The signal picked up from MEG sensors is a mixture of signals from multiple brai
 
 There are two important concepts in source reconstruction:
 
-The forward problem involves predicting the magnetic fields measured by the sensors based on known neural source locations and head anatomy. This is a well-posed problem with a unique solution, but its accuracy depends on precise modeling of the head and brain.
+The **forward problem** involves predicting the magnetic fields measured by the sensors based on known neural source locations and head anatomy. This is a well-posed problem with a unique solution, but its accuracy depends on precise modeling of the head and brain.
 
-The inverse problem, on the other hand, aims to determine the neural sources that generated the recorded magnetic fields. This problem is ill-posed, meaning there are infinitely many possible solutions, and it requires mathematical constraints and prior assumptions to estimate the most plausible source configuration.
+The **inverse problem**, on the other hand, aims to determine the neural sources that generated the recorded magnetic fields. This problem is ill-posed, meaning there are infinitely many possible solutions, and it requires mathematical constraints and prior assumptions to estimate the most plausible source configuration.
 
 <center>
 <img src="../../images/sr/sr_1.png" alt="Forward and Inverse Problems for Source Reconstruction" style="width: 70%; height: auto;">
@@ -49,9 +49,9 @@ The accuracy of the forward model also depends on the level of detail of our vol
 
 Two widely used approaches for realistic head modeling are boundary-element models and finite-element models.
 
-Boundary element models divide the head into discrete boundary surfaces representing the interfaces between different tissues (e.g., brain, skull, scalp). Current flow is modelled using a geometry that is defined by these boundaries. Boundary element models are a simplification because here we assume that each tissue is a homogeneous layer with uniform properties.
+**Boundary element models** divide the head into discrete boundary surfaces representing the interfaces between different tissues (e.g., brain, skull, scalp). Current flow is modelled using a geometry that is defined by these boundaries. Boundary element models are a simplification because here we assume that each tissue is a homogeneous layer with uniform properties.
 
-In contrast, finite element models represent the head as a volumetric mesh composed of small, discrete elements (such as tetrahedra or hexahedra), which can represent the entire volume of each tissue. This allows for a more complex and heterogeneous modelling of tissue properties (such as anisotropy in white matter, where there is different conductivity in different directions) and fine details of the head’s anatomy.
+In contrast, **finite element models** represent the head as a volumetric mesh composed of small, discrete elements (such as tetrahedra or hexahedra), which can represent the entire volume of each tissue. This allows for a more complex and heterogeneous modeling of tissue properties (such as anisotropy in white matter, where there is different conductivity in different directions) and fine details of the head’s anatomy.
 
 ## The New York Head
 
@@ -130,3 +130,7 @@ We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the
 </center>
 
 Now, for a given location, applying LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
+
+# Tutorials 
+
+- [Analyzing Neural Time Series, Chapter 14: Basics of Single-Dipole and Distributed-Source Imaging](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)

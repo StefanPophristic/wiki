@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guide to Updating the Wiki
-nav_order: 1
+nav_order: 8
 has_children: true
 ---
 
@@ -39,12 +39,15 @@ Once you have the repository cloned, you can start making changes to the wiki! O
 
 All content files are written in markdown and are found in the `docs` folder. This template folder is designed to show you the structure of the folder and files within it. Take a look at the menu bar on the published site, and the folders found inside docs. You will see that each folder corresponds to a tab in the menu:
 
-![](../../images/wikiGuide_tutorial_menu.png)
-![](../../images/wikiGuide_tutorial_folders.png)
+<center>
+<img src="../../images/wikiGuide_tutorial_menu.png" alt="Wiki Menu" style="width: 40%; height: auto;">
+<img src="../../images/wikiGuide_tutorial_folders.png" alt="Wiki Menu" style="width: 40%; height: auto;">
+</center>
 
 If you want to make a new tab for the website, copy over this template folder, and change the names of the files to whatever you need.
 
 Each markdown file will begin with a preamble that looks something like this:
+
 ```
 ---
 layout: default
@@ -55,6 +58,7 @@ nav_order: 1
 has_children: false
 ---
 ```
+
 This preamble tells jekyll how to put all of the pages together.
 - **layout**: tells jekyll to apply the normal styling to this page.
 - **title**: is the name that will appear in the menu bar for this page.
