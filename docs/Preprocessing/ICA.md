@@ -6,11 +6,6 @@ nav_order: 3
 has_children: false
 ---
 
-To Do (Stefan):
-- Add in theoretical section
-- Add in tutorial links
-- Add in time maps of components
-
 # Overview
 
 Independent Component Analysis, or ICA, is a mathemetical tool that rearranges data from being organized per channel to being organized per component. A component is an abstract representation of underlying source signal that contributes to the observed data, and can represent things like a heartbeat, eyeblink, or multiple brain regions (adjacent or not) that produce activity in the same pattern. We use ICA to further clean our data. By rearranging our data into components, we can find which parts of our data most likely represent sources that are not from the brain (environmental noise, eye movements, or heartbeat) and remove that subsection of the data.
@@ -21,7 +16,8 @@ This section is organized as follows: The **Theoretical Background** goes over w
 
 
 ## Tutorials
-
+- [Helpful Overview Tutorial](https://www.youtube.com/watch?v=GgLaP4Des1Q&t=144s)
+- [In Depth Tutorial](https://www.youtube.com/watch?v=ITkk6dHxh_w&list=PLXSSzzVoCfsXIaA67dmIszgDgRXjgeZgu)
 
 # Implementation
 
@@ -54,6 +50,8 @@ The first is a topographic map of each component, mapping the activity associate
 Note: Some versions of MNE python require you to "quit" out of the MNE application that opens up when you run this plotting code, by double clicking the "MNE" icon in your application dock, and selecting "quit application".
 
 ## Component Identities
+
+Note: Images are missing, I'm waiting to get images of my own brain to include here. -Stefan
 
 **Eyeblinks**
 
