@@ -7,5 +7,4 @@ gem "jekyll-seo-tag"  # Add this line
 
 gem "jekyll-include-cache"  # Add this line
 gem "csv"
-gem "logger"
 gem "base64"
