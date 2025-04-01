@@ -22,16 +22,17 @@ In order to update the wiki, you should have the following:
 You can't make edits to the wiki directly online. This is designed to prevent any edits that you make from being immediately published on the front-facing version of the website (including changes that could potentially lead to a crash!). In order to make edits, you first have to copy over the repo containing all of the wiki code.
 
 There are two ways to do this:
-1. Directly clone the repository.
+1. [preferred] Directly clone the repository.
 2. Fork the repository, then clone it.
+
+**Cloning** a repository copies it from a user's github onto your local computer. Once you have it on your local computer, you can make any edits that you want. Once you make the edits, you **push** and **commit** the local version back to the main version hosted on github. This updates the main version, automatically and immediately publishing the changes to the online wiki! In order to do this, make sure that the current [maintainer of the wiki]({{site.maintainer}}) adds you as a collaborator on the project.
+
+[quick tutorial on cloning, pushing](https://www.youtube.com/watch?v=yxvqLBHZfXk)
 
 **Forking** a repository essentially copies it from one user's github account to your own. Once you do this, you don't need the original users permissions to make any changes, and you can publish your own version of the wiki using gitpages. This is helpful in case you decide you want to make your own personal wiki, or if for some reason the person who is in charge of the wiki is nowhere to be found. If you decide to fork the wiki, and want to add your changes to the original wiki repo, you will have to submit a pull request that is approved by the original owner of the lab wiki.
 
 [Quick tutorial on forking](https://www.youtube.com/watch?v=-9ftoxZ2X9g)
 
-**Cloning** a repository copies it from a user's github onto your local computer. Once you have it on your local computer, you can make any edits that you want. Once you make the edits, you **push** and **commit** the local version back to the main version hosted on github. This updates the main version, automatically and immediately publishing the changes to the online wiki!
-
-[quick tutorial on cloning, pushing](https://www.youtube.com/watch?v=yxvqLBHZfXk)
 
 ## Making Changes to the wiki
 

@@ -1,6 +1,8 @@
 title: NELLAB Wiki
 description: A wiki for Nellab
 
+maintainer: https://www.pophristic.com/
+
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme

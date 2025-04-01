@@ -2,7 +2,7 @@
 layout: default
 title: Power Analyses
 parent: Behavioral Analyses
-nav_order: 1
+nav_order: 2
 has_children: False
 ---
 
