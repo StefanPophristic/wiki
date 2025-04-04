@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Source Reconstruction"
-nav_order: 5
+nav_order: 7
 has_children: true
 ---
 
@@ -131,6 +131,6 @@ We want to minimize the diagonal of the matrix **W<sup>T</sup>CW**, which is the
 
 Now, for a given location, applying LCVMB yields an estimated time course of neural activity at that specific location. We then repeat this procedure for as many locations as we want to reconstruct the distribution of neural activity across the brain.
 
-# Tutorials 
+# Tutorials
 
 - [Analyzing Neural Time Series, Chapter 14: Basics of Single-Dipole and Distributed-Source Imaging](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
