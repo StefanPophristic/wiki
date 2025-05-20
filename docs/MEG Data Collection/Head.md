@@ -123,7 +123,13 @@ On the computer that saves participant information (not the one in jeff's office
 
 ### Head scan
 - Get consent form, DOB, R-number -> file away
-- Draw dots on head using the template
+- Draw dots on head using the template:
+
+<img src="../../images/MEG_Data_Collection/fiducials.png" alt="fiducials" style="width: 50%; height: auto;">
+
+- This image shows where the nasion and tragi are located.
+- The left (red) and right (yellow) markers should be drawn using a makeup pencil approximately 1 centimeter away from the tragus, towards the frontal side of the participant. The center forehead (blue), left forehead (white), and right forehead (green/black) markers can all be drawn using the stencil template found in the office, after aligning the stencil with the nasion. (Picture needed)
+
 - Put on neck brace (divot is where the chin goes)
 - Then put black FastScanII tracker over neck brace (to orient the scanner in space)
   - The sensor should locate on the right side of the participant
@@ -140,6 +146,7 @@ On the computer that saves participant information (not the one in jeff's office
     6. Center Forehead (Blue) Marker
     7. Left Forehead (White) Marker
     8. Right Forehead (Green/Black) Marker
+
 - Save as, R number & date format
 
 ### confirm that participant is free of metal.

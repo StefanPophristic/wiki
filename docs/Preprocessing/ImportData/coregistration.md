@@ -39,9 +39,14 @@ mne coreg
 
 4. Now the goal is to align the headshape with the head to the extent possible.
 
-If you have a structural scan, this is best done using the fiducials and other anatomical information, and you should be able to get a pretty good fit.
+#### If you have an MRI for your participant
 
-If you are using fsaverage, you have to modify this template to fit your subject as best possible.
+If you have a structural scan, this is best done using the fiducials and other anatomical information, and you should be able to get a pretty good fit. The most important part of using an MRI is **DO NOT TOUCH THE SCALING PARAMETERS**. Your MRI should already match the headshape in terms of dimensions.
+
+Instead, you can directly work on translating and rotating your head scan points to match your participant's MRI.
+
+#### If you do not have an MRI for your participant
+You will have to use fsaverage, a premade MRI meaned across many subjects to best represent the structure of the head and the brain.  See above for instructions on how to get fsaverage into your subjects folder. Because the goal of coregistration is to reach a good match between head shape and where the brain is located, you have to modify this template to fit your subject as best possible.
 
 The following points will describe your options for fitting the head beginning with the options on the left side of the screen followed by the options on the right side of the screen.
 
@@ -55,7 +60,19 @@ Moving to the right column, you have a number of options for modifying the heads
 
 'Translation and Rotation' allows you to move and—yes, you've guessed it—rotate the headshape along the X, Y, and Z axes. Again, you can hit 'Fit (ICP)' or, alternatively, 'Fit Fid.' (short for 'fiducials') to align the headshape to the MRI/fsaverage surface.
 
-If you are using the fsaverage brain, it's often not sufficient to simply hit one or more of the 'Fit' buttons—you'll typically have to do some manual adjusting yourself. The goal is to make the points fit as closely as possible to the surface without burying points.
+#### Fitting MRI scanned participants
+If you are coregistering using an MRI for your participant, your goal is to get the fiducials of your head scan to match the fiducials of the MRI as best as possible. 
+
+If your MRI does not contain fiducial information, you will have to manually place them on your MRI in the MNE coregistration GUI. This is done by unclicking "lock fiducials" seen in the image below, and either manipulating the X, Y, and Z coordinates, or clicking on the anatomical points on the MRI through the GUI. These fiducials coordinates can then be saved and you can continue coregistering.
+
+![coreg_fiducials](../../../images/ImportData/coregistration/fiducials_mne_coreg.png)
+
+#### Fitting non-MRI scanned participants
+If you are using the fsaverage brain, it's often not sufficient to simply hit one or more of the 'Fit' buttons—you'll typically have to do some manual adjusting yourself. 
+Keep note of the following points:
+- The goal is to make the points fit as closely as possible to the surface without burying points.
+- Every circle or disc is a marker measurement. Therefore they need to be visible, outside of the head.
+- The "grow hair" tool on the left side of the coregistration GUI can be used to change then size of the MRI scan to match the head shape scan. This is particularly useful for participants with a lot of hair.
 
 In the end, you should have something that looks along the lines of this:
 
