@@ -73,6 +73,7 @@ Keep note of the following points:
 - The goal is to make the points fit as closely as possible to the surface without burying points.
 - Every circle or disc is a marker measurement. Therefore they need to be visible, outside of the head.
 - The "grow hair" tool on the left side of the coregistration GUI can be used to change then size of the MRI scan to match the head shape scan. This is particularly useful for participants with a lot of hair.
+- As a rule of thumb, the amount of error between the MRI and head scan fiducials should be less than 8 millimeters, and the average points error should be less than 10 millimeters. These measurements can be found in the bottom right of the coregistration GUI.
 
 In the end, you should have something that looks along the lines of this:
 
