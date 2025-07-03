@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Methods Meetings"
+nav_order: 3
+has_children: false
+---
+
+<p>Below is a schedule of past methods meetings. You can find slide decks and any associated tutorials under <code>SHARED > Methods Meetings > [year]_Meetings</code>.</p>
+
+To update this table from a methods meeting, add in the relevant information under <code>_data > meetings.yml</code> of this website code. 
+
+{% assign years = site.data.meetings.events | map: "year" | uniq %}
+
+{% for year in years %}
+  <h2>{{ year }}</h2>
+  
+  {% assign seasons = site.data.meetings.events | where: "year", year | map: "season" | uniq %}
+  
+  {% for season in seasons %}
+    <h3>{{ season }}</h3>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Presenter</th>
+          <th>Tutorial</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in site.data.meetings.events %}
+          {% if event.year == year and event.season == season %}
+            {% for session in event.sessions %}
+              <tr>
+                <td>{{ session.date }}</td>
+                <td>{{ session.name }}</td>
+                <td>{{ session.presenter }}</td>
+                <td>{{ session.tutorial | capitalize }}</td>
+              </tr>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endfor %}
+{% endfor %}

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "HPC"
-parent: "Background"
-nav_order: 1
+parent: "Getting Started"
+nav_order: 2
 ---
 
 # Code

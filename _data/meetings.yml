@@ -1,0 +1,16 @@
+events:
+  - year: 2025
+    season: Summer
+    sessions:
+      - date: 2025-05-19
+        name: Data Troubleshooting
+        presenter: Stefan Pophristic
+        tutorial: No
+      - date: 2025-06-27
+        name: Linear Modeling using Eelbrain
+        presenter: Nigel Flower
+        tutorial: Yes
+      - date: 2025-07-03
+        name: RSA
+        presenter: Aline-Priscillia Messi
+        tutorial: Yes
