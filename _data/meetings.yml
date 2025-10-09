@@ -1,5 +1,16 @@
 events:
   - year: 2025
+    season: Fall
+    sessions:
+      - date: 2025-10-08
+        name: Using Illustrator for figures and posters
+        presenter: Stefan Pophristic
+        tutorial: yes
+      - date: 2025-10-22
+        name: Running behavioral experiments with JSPsych and Datapipe
+        presenter: Stefan Pophristic
+        tutorial: yes
+  - year: 2025
     season: Summer
     sessions:
       - date: 2025-05-19
