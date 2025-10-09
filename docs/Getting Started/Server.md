@@ -13,3 +13,6 @@ Include sections on:
 - comments on shared folders
     - corpora
     - tutorials 
+
+
+https://sites.google.com/nyu.edu/nyu-hpc/hpc-systems/greene/software/open-ondemand-ood-with-condasingularity
