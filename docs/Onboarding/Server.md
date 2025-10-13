@@ -8,11 +8,15 @@ section: "Lab"
 
 # Intro
 
-The NELLAB has its own server which can be accessed by any lab member. Since the neural data we analyze is very large, we store it on the server, which has an very large memory. Data on the server is stored in parallel on three separate hard-drives in the lab, ensuring that if one hard-drive dies, none of the data will be lost. Therefore, it is standard practice in this lab to save all data, pre-processing scripts, and analysis scripts on the server. However, note that if you delete a file from the server, it is very difficult to retrieve it. 
+The NELLAB has its own server which can be accessed by any lab member. Since the neural data we analyze is very large, we store it on the server, which has an very large memory. Data on the server is stored in parallel on three separate hard-drives in the lab, ensuring that if one hard-drive dies, none of the data will be lost. Therefore, it is standard practice in this lab to save all data, pre-processing scripts, and analysis scripts on the server.
 
 The server is maintained by the Psych IT. If you have any issues, you can reach out them [here](https://psychcns.freshdesk.com/support/home). 
 
 Accessing the server must be done either on NYU wifi, or via the [NYU VPN](https://www.nyu.edu/life/information-technology/infrastructure/network-services/vpn.html). 
+
+A few warnings to take note of:
+- While the contents of the server are further backed up by Psych IT, once you delete a file from the server, it is very difficult to recover it. 
+- Computers often (~ once a day) loose access to the server temporarily. This means that if you have a program/analysis running off of the server (i.e. you are running the script locally, but the script is stored on the server) and the server looses connection, the process will be terminated. Therefore, if running anything that takes several days, either transfer the file locally or add safety checkpoints in your script.
 
 # Organization
 
