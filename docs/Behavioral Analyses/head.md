@@ -3,6 +3,7 @@ layout: default
 title: Behavioral Analyses
 nav_order: 4
 has_children: true
+section: "Behavioral"
 ---
 
 This section is still under construction!

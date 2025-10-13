@@ -6,6 +6,7 @@ grand_parent: "Preprocessing"
 nav_order: 3
 mathjax: true
 has_children: false
+section: "MEG"
 ---
 
 ## Table of contents

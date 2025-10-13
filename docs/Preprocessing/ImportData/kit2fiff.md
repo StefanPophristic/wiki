@@ -5,6 +5,7 @@ parent: "1. Import Data"
 grand_parent: "Preprocessing"
 nav_order: 2
 has_children: true
+section: "MEG"
 ---
 
 # Kit2fiff

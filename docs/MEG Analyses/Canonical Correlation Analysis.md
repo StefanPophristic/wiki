@@ -4,6 +4,7 @@ title: "Canonical Correlation Analysis"
 parent: "MEG Analyses"
 nav_order: 5
 has_children: true
+section: "MEG"
 ---
 
 ## Table of contents

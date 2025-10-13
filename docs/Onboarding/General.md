@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "General Tools"
-parent: "Getting Started"
+parent: "Onboarding"
 nav_order: 4
+section: "Lab"
 ---
 
 Given the type of work we do, there are many tools we use to help us in coding and general organization. The choice of which tools to use varies from student to student—but here we have compiled some of our favorites. Before starting your first project we recommend skimming through these tools to get an idea of what might be helpful as you work!

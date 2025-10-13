@@ -4,6 +4,7 @@ title: "1. Import Data"
 parent: "Preprocessing"
 nav_order: 1
 has_children: true
+section: "MEG"
 ---
 
 # Code

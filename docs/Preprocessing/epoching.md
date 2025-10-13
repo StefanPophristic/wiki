@@ -4,6 +4,7 @@ title: "4. Epoching"
 parent: "Preprocessing"
 nav_order: 4
 has_children: false
+section: "MEG"
 ---
 
 # Epoching

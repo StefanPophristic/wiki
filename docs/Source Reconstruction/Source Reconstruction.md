@@ -3,6 +3,7 @@ layout: default
 title: "Source Reconstruction"
 nav_order: 7
 has_children: true
+section: "MEG"
 ---
 
 # Code

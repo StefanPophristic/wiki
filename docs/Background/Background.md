@@ -3,6 +3,7 @@ layout: default
 title: "Background"
 nav_order: 2
 has_children: true
+section: "MEG"
 ---
 
 This section is still under construction! The HPC and Mathematical Background sections are finished.

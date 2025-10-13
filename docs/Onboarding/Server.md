@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "Lab Server"
-parent: "Getting Started"
+parent: "Onboarding"
 nav_order: 3
+section: "Lab"
 ---
 
 Include sections on:

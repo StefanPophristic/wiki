@@ -4,6 +4,7 @@ title: "Decoding"
 parent: "MEG Analyses"
 nav_order: 3
 has_children: false
+section: "MEG"
 ---
 
 # Decoding

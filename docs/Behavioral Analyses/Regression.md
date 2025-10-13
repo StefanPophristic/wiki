@@ -4,6 +4,7 @@ title: Regression Models
 parent: Behavioral Analyses
 nav_order: 1
 has_children: False
+section: "Behavioral"
 ---
 
 

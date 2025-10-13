@@ -3,6 +3,7 @@ layout: default
 title: "Mathematical Background"
 parent: "Background"
 nav_order: 1
+section: "MEG"
 ---
 
 

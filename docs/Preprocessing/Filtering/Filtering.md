@@ -4,6 +4,7 @@ title: "2. Filtering"
 parent: "Preprocessing"
 nav_order: 2
 has_children: true
+section: "MEG"
 ---
 
 # Filtering

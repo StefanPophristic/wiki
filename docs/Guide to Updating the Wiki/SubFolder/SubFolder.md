@@ -4,6 +4,7 @@ title: "SubFolder Land Page"
 parent: "Guide to Updating the Wiki"
 nav_order: 1
 has_children: true
+section: "Lab"
 ---
 
 This is the land page for the subfolder. If you click on the "subFolder" button in the sidebar, it will take you here!

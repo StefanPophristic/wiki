@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Getting Started"
+title: "Onboarding"
 nav_order: 1
+section: "Lab"
 ---
 
 # Code

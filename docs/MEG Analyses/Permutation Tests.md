@@ -4,6 +4,7 @@ title: "Permutation Tests"
 parent: "MEG Analyses"
 nav_order: 2
 has_children: false
+section: "MEG"
 ---
 
 This section is still under construction!

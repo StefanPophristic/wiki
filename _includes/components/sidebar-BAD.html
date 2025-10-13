@@ -1,0 +1,138 @@
+
+<div class="side-bar">
+  <div class="site-header" role="banner">
+    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav"> 
+    {% assign sections = ",Behavioral,MEG,Lab" | split: "," %}
+    {% assign all_pages = site.pages | sort: "nav_order" %}
+
+    {% for sec in sections %}
+      {% assign section_pages = "" | split: "" %}
+      {% for p in all_pages %}
+        {% assign page_section = p.section %}
+        {% if page_section == nil %}
+          {% assign page_section = "" %}
+        {% endif %}
+        {% if page_section == sec %}
+          {% assign section_pages = section_pages | push: p %}
+        {% endif %}
+      {% endfor %}
+
+      {% if section_pages.size > 0 %}
+        <hr>
+        {% unless sec == "" %}
+          <h3 class="nav-section">{{ sec }}</h3>
+        {% endunless %}
+
+        {% for p in section_pages %}
+          {% if p.parent == nil %}
+          
+            {% if p.has_children %}
+              <details class="nav-item">
+                <summary><a href="{{ p.url | relative_url }}">{{ p.title }}</a></summary>
+                {% assign children = "" | split: "" %}
+                {% for c in section_pages %}
+                  {% if c.parent == p.title %}
+                    {% assign children = children | push: c %}
+                  {% endif %}
+                {% endfor %}
+                {% for child in children %}
+                  <div class="nav-child">
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  </div>
+                {% endfor %}
+              </details>
+            {% else %}
+              <div class="nav-item"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></div>
+            {% endif %}
+
+
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  {% endif %}
+</div> 
+
+
+<!-- <div class="side-bar">
+  <div class="site-header" role="banner">
+    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">  {# <-- preserve theme wrapper #}
+    {% assign sections = " ,Behavioral,MEG,Lab" | split: "," %}
+    {% assign all_pages = site.pages | sort: "nav_order" %}
+
+    {% for sec in sections %}
+      {% assign section_pages = "" | split: "" %}
+      {% for p in all_pages %}
+        {% assign page_section = p.section %}
+        {% if page_section == nil %}
+          {% assign page_section = "Nothing" %}
+        {% endif %}
+        {% if page_section == sec %}
+          {% assign section_pages = section_pages | push: p %}
+        {% endif %}
+      {% endfor %}
+
+      {% if section_pages.size > 0 %}
+        <hr>
+        <h3 class="nav-section">{{ sec }}</h3>
+
+        {% for p in section_pages %}
+          {% if p.parent == nil %}
+            {% if p.has_children %}
+              <details class="nav-item">
+                <summary><a href="{{ p.url | relative_url }}">{{ p.title }}</a></summary>
+                {% assign children = "" | split: "" %}
+                {% for c in section_pages %}
+                  {% if c.parent == p.title %}
+                    {% assign children = children | push: c %}
+                  {% endif %}
+                {% endfor %}
+                {% for child in children %}
+                  <div class="nav-child">
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  </div>
+                {% endfor %}
+              </details>
+            {% else %}
+              <div class="nav-item"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  {% endif %}
+</div> -->

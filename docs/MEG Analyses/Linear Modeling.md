@@ -4,6 +4,7 @@ title: "Linear Modeling"
 parent: "MEG Analyses"
 nav_order: 1
 has_children: false
+section: "MEG"
 ---
 
 This section is still under construction.

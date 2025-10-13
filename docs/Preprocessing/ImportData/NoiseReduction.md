@@ -5,6 +5,7 @@ parent: "1. Import Data"
 grand_parent: "Preprocessing"
 nav_order: 1
 has_children: False
+section: "MEG"
 ---
 
 # Noise reduction

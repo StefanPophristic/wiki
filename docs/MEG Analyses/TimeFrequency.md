@@ -4,6 +4,7 @@ title: Time Frequency Analyses
 nav_order: 5
 parent: MEG Analyses
 has_children: false
+section: "MEG"
 ---
 
 

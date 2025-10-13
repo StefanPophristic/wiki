@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "HPC"
-parent: "Getting Started"
+parent: "Onboarding"
 nav_order: 2
+section: "Lab"
 ---
 
 # Code

@@ -3,6 +3,7 @@ layout: default
 title: "Preprocessing"
 nav_order: 6
 has_children: true
+section: "MEG"
 ---
 
 # Code

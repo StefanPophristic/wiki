@@ -3,6 +3,7 @@ layout: default
 title: MEG Analyses
 nav_order: 8
 has_children: true
+section: "MEG"
 ---
 
 In this section we will describe and document some of the most commonly used analysis methods in MEG. Be aware that the exact analysis method you will use for your experiment is highly dependent on the exact questions your experiment is trying to answer, the type of data you have collected, and what your goal of the project is. So rather than tell you exactly how to do something, this section is meant to give you ideas on what types of analyses exist, how to begin implementing them in MNE python, and what considerations need to be taken into account when conducting these analyses.
