@@ -26,6 +26,8 @@ Welcome to the lab! Be sure to ask the lab manager/admin staff to get access to 
 - Be added to the lab Wiki as a contributor
 - Be given access to the lab server (see page on lab server for details)
 - Set up access to the HPC (see page on HPC for details)
+- Human Subjects Training (https://www.nyu.edu/research/resources-and-support-offices/getting-started-withyourresearch/human-subjects-research/tutorial.html)
+- Ask Lab Manager or Alec/Liina to be added to relevant IRBs (see `Lab > Lab Functions > IRB` for more details)
 
 This section of the lab wiki will give you quick tutorials on how to set up various tools that we use in the lab. We recommend skimming through these pages at some point just to get a sense of the types of tools that may be helpful as you are getting started!
 
