@@ -6,10 +6,22 @@ events:
         name: Using Illustrator for figures and posters
         presenter: Stefan Pophristic
         tutorial: yes
-      - date: 2025-10-22
+      - date: 2025-10-28
         name: Running behavioral experiments with JSPsych and Datapipe
         presenter: Stefan Pophristic
         tutorial: yes
+      - date: 2025-11-07
+        name: Decoding Round-table
+        presenter: Group Discussion
+        tutorial: no
+      - date: 2025-11-12
+        name: Cluster Permutation Tests
+        presenter: Simone
+        tutorial: TBD
+      - date: 2025-11-19
+        name: Cursor
+        presenter: Solim LeGris
+        tutorial: no
   - year: 2025
     season: Summer
     sessions:

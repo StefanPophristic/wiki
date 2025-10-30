@@ -8,7 +8,7 @@ section: "Lab"
 
 # Intro
 
-The NELLAB has its own server which can be accessed by any lab member. Since the neural data we analyze is very large, we store it on the server, which has an very large memory. Data on the server is stored in parallel on three separate hard-drives in the lab, ensuring that if one hard-drive dies, none of the data will be lost. Therefore, it is standard practice in this lab to save all data, pre-processing scripts, and analysis scripts on the server.
+The NELLAB has its own server which can be accessed by any lab member. Since the neural data we analyze is very large, we store it on the server, which has (as of 2022) ~103 TB of memory. Data on the server is stored in parallel on three separate hard-drives in the lab, ensuring that if one hard-drive dies, none of the data will be lost. Therefore, it is standard practice in this lab to save all data, pre-processing scripts, and analysis scripts on the server.
 
 The server is maintained by the Psych IT. If you have any issues, you can reach out them [here](https://psychcns.freshdesk.com/support/home). 
 
@@ -36,6 +36,12 @@ For mac users:
 3. Click `Connect to Server`
 4. In the top box, type `smb://nellabny.psych.nyu.edu/server`
 5. Click `Connect`, then type in your NYU username and password
+
+For PCs:
+1. Choose Map Network Drive (sometimes under the Tools menu) 
+2. Enter `\\nellabny.psych.nyu.edu\Server`
+3. Choose `Connect using different credentials`
+4. Username must be `ad\<netID>`, password is your NYU password 
 
 Note: this must be done either on NYU wifi, or via the [NYU VPN](https://www.nyu.edu/life/information-technology/infrastructure/network-services/vpn.html).
 
