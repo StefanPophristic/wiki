@@ -12,16 +12,20 @@ events:
         tutorial: yes
       - date: 2025-11-07
         name: Decoding Round-table
-        presenter: Group Discussion
+        presenter: Maya Taliaferro
         tutorial: no
       - date: 2025-11-12
         name: Cluster Permutation Tests
-        presenter: Simone
+        presenter: Simone Møller Krogh
         tutorial: TBD
       - date: 2025-11-19
         name: Cursor
         presenter: Solim LeGris
-        tutorial: no
+        tutorial: yes
+      - date: 2025-10-5
+        name: Hacks for Pretty Plots
+        presenter: Aline-Priscillia Messi 
+        tutorial: TBD
   - year: 2025
     season: Summer
     sessions:

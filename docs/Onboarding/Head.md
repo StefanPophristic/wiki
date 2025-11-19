@@ -28,6 +28,11 @@ Welcome to the lab! Be sure to ask the lab manager/admin staff to get access to 
 - Set up access to the HPC (see page on HPC for details)
 - Human Subjects Training (https://www.nyu.edu/research/resources-and-support-offices/getting-started-withyourresearch/human-subjects-research/tutorial.html)
 - Ask Lab Manager or Alec/Liina to be added to relevant IRBs (see `Lab > Lab Functions > IRB` for more details)
+- For using the MEG, you must now complete NYU Scishield training for handling hazardous materials (don't worry we don't actually handle anything hazardous when running participants). Link can be found [here](https://www.nyu.edu/life/safety-health-wellness/research-and-laboratory-safety/scishield-resources.html) and [here](https://nyu.scishield.com/)
+    - Create an account
+    - Let the current manager of the MEG center know to add you to the relevant tutorials (ask Alec/Liina/Lab Manager/another student who to ask for this)
+
+
 
 This section of the lab wiki will give you quick tutorials on how to set up various tools that we use in the lab. We recommend skimming through these pages at some point just to get a sense of the types of tools that may be helpful as you are getting started!
 
