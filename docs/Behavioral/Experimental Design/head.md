@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Experimental Design
-nav_order: 3
+nav_order: 1
 has_children: true
 section: "Behavioral"
 ---
@@ -10,4 +10,4 @@ Experimental design varies greatly depending on the specific questions and metho
 
 Some of the common tasks we use are:
 1. Lexical Decision Tasks
-2. Repid Parallel Visual Presentation
+2. Rapid Parallel Visual Presentation

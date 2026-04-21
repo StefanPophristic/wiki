@@ -28,7 +28,7 @@ The `SHARED` folder is currently a mess and needs to be cleaned. However, there 
 - `LAB_MEETING_PRESENTATIONS`: Upload your lab meeting slides here
 - `MRI`: The MRIs that we have access to (all MRIs in this folder come from participants who have given us written permission to use their MRI in future studies)
 
-# First Time Access
+# Connecting to the Server
 
 For mac users: 
 1. Open Finder
@@ -45,9 +45,11 @@ For PCs:
 
 Note: this must be done either on NYU wifi, or via the [NYU VPN](https://www.nyu.edu/life/information-technology/infrastructure/network-services/vpn.html).
 
-# Adding it to finder
+# Access via Terminal
 
-To access via Terminal (mac):
+Once you are connected to the server (see above) you can access the server via Terminal. 
+
+For macs:
 ```
 cd ~ [gets you to user base directory]
 cd .. 
@@ -55,7 +57,10 @@ cd .. [gets you to computers root directory]
 cd Volumes/server [gets you to the server]
 ```
 
-Once you connect to the server, for easy access from Finder, you can do the following:
+# Access via Finder
+
+Once you are connected to the server (see above) you can likewise access the server via Finder (mac). To set this up, you can do the following: 
+
 ```
 Finder > Settings > Sidebar
 ```
