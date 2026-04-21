@@ -70,19 +70,19 @@ Once your advisor (or DGS) has approved the money, Teresa will generate a *Purch
 
 Once you have that number, open the Invoice page on Prolific, under `Finances > Invoices`:
 
-<img src="../../../images/Prolific_Payment/Prolific_invoice-1.png" alt="Prolific Payment: Invoice Generation, Select Finances" width="30%" />
+<img src="../../../images/Prolific_Payment/prolific_invoice-1.png" alt="Prolific Payment: Invoice Generation, Select Finances" width="30%" />
 
 <br>
 
-<img src="../../../images/Prolific_Payment/Prolific_invoice-2.png" alt="Prolific Payment: Invoice Generation, Select Invoices" width="30%" />
+<img src="../../../images/Prolific_Payment/prolific_invoice-2.png" alt="Prolific Payment: Invoice Generation, Select Invoices" width="30%" />
 
 <br>
 
-<img src="../../../images/Prolific_Payment/Prolific_invoice-3.png" alt="Prolific Payment: Invoice Generation, Select Request an Invoice" width="75%" />
+<img src="../../../images/Prolific_Payment/prolific_invoice-3.png" alt="Prolific Payment: Invoice Generation, Select Request an Invoice" width="75%" />
 
 The invoice page will open. Fill in the study cost in the first field and the Purchase Order Number in the second. 
 
-<img src="../../../images/Prolific_Payment/Prolific_invoice-4.png" alt="Prolific Payment: Invoice Generation, fill in fields" width="50%" />
+<img src="../../../images/Prolific_Payment/prolific_invoice-4.png" alt="Prolific Payment: Invoice Generation, fill in fields" width="50%" />
 
 You will receive an email with the generated invoice as a pdf. Send that pdf to Teresa. 
 
