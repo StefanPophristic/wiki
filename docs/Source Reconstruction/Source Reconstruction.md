@@ -134,4 +134,4 @@ Now, for a given location, applying LCVMB yields an estimated time course of neu
 
 # Tutorials
 
-- [Analyzing Neural Time Series, Chapter 14: Basics of Single-Dipole and Distributed-Source Imaging](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)
+- [Analyzing Neural Time Series, Chapter 24: Basics of Single-Dipole and Distributed-Source Imaging](https://search.library.nyu.edu/discovery/fulldisplay?docid=alma990039874450107876&context=L&vid=01NYU_INST:NYU&lang=en&search_scope=CI_NYU_CONSORTIA&adaptor=Local%20Search%20Engine&tab=Unified_Slot&query=any,contains,analyzing%20neural%20time%20series)

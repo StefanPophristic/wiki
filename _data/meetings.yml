@@ -1,4 +1,12 @@
 events:
+  - year: 2026
+    season: Fall
+    sessions:
+      - Date: None this semester
+  - year: 2026
+    season: Spring
+    sessions:
+      - Date: None this semester
   - year: 2025
     season: Fall
     sessions:
