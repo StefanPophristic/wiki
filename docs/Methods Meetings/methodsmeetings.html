@@ -19,6 +19,12 @@ To update this table for a methods meeting, add in the relevant information unde
   
   {% for season in seasons %}
     <h3>{{ season }}</h3>
+
+    {% for event in site.data.meetings.events %}
+      {% if event.year == year and event.season == season and event.organizer %}
+        <p>Meetings Organizer: {{ event.organizer }}</p>
+      {% endif %}
+    {% endfor %}
     
     <table>
       <thead>

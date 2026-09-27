@@ -1,14 +1,43 @@
 events:
   - year: 2026
     season: Fall
+    organizer: Julia Cataldo
     sessions:
-      - Date: None this semester
-  - year: 2026
-    season: Spring
-    sessions:
-      - Date: None this semester
+      - date: 2026-09-25
+        name: Deciding the semester's schedule
+        presenter: Julia Cataldo
+        tutorial: no
+      - date: 2026-10-09
+        name: Behavioral data cleaning, preprocessing and stats
+        presenter: Julia Cataldo
+        tutorial: no
+      - date: 2026-10-16
+        name: MEG preprocessing pipeline (including single trial vs. participant-averaded STC creation). (We should have a yml for new students)
+        presenter: Stefan?
+        tutorial: no
+      - date: 2026-10-23
+        name: \"What can I use this for?" series - (Spatio)Temporal Clustering edition
+        presenter: Julia Cataldo
+        tutorial: no
+      - date: 2026-11-06
+        name: \"What can I use this for?" series - Regression + How to use the HPC
+        presenter: Marianne Azar
+        tutorial: no
+      - date: 2026-11-13
+        name: \"What can I use this for?" series - RSA edition
+        presenter: Boxuan Li & Marianne Azar
+        tutorial: no
+      - date: 2026-11-20
+        name: \"What can I use this for?" series - Decoding edition
+        presenter: Gyu-Hwan? Simone?
+        tutorial: no
+      - date: 2026-12-04
+        name: Making cute plots
+        presenter: Gyu-Hwan?
+        tutorial: no
   - year: 2025
     season: Fall
+    organizer:
     sessions:
       - date: 2025-10-08
         name: Using Illustrator for figures and posters
@@ -36,6 +65,7 @@ events:
         tutorial: TBD
   - year: 2025
     season: Summer
+    organizer:
     sessions:
       - date: 2025-05-19
         name: Data Troubleshooting
