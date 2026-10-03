@@ -3,7 +3,7 @@ description: A wiki for Nellab
 
 maintainer: https://www.pophristic.com/
 
-remote_theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.12.0
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
