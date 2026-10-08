@@ -1,13 +1,15 @@
-<div class="custom-page-footer fs-2 text-grey-dk-000 mt-4 pt-2 border-top-single">
-    {% if page.writer %}
-    <p class="mb-1"><strong>Writer:</strong> {{ page.writer }}</p>
-    {% endif %}
+{% assign writer = page.writer | default: site.writer %}
+{% assign editor = page.editor | default: site.editor %}
+{% assign last_edited = page.last_modified_date %}
 
-    {% if page.editor %}
-    <p class="mb-1"><strong>Editor:</strong> {{ page.editor }}</p>
-    {% endif %}
-
-    {% if page.last_modified_date %}
-    <p class="mb-1"><strong>Last edited:</strong> {{ page.last_modified_date | date: "%B %d, %Y" }}</p>
-    {% endif %}
+{% if writer or editor or last_edited %}
+<div class="page-meta-footer text-small text-grey-dk-000 mb-2">
+    {% if writer %}<span class="mr-3"><strong>Writer:</strong> {{ writer }}</span>{% endif %}
+    {% if editor %}<span class="mr-3"><strong>Editor:</strong> {{ editor }}</span>{% endif %}
+    {% if last_edited %}<span><strong>Last edited:</strong> {{ last_edited | date: "%B %d, %Y" }}</span>{% endif %}
 </div>
+{% endif %}
+
+{%- if site.footer_content -%}
+<p class="text-small mb-0">{{ site.footer_content }}</p>
+{%- endif -%}

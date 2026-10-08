@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Preprocessing"
-writer: Stefan Pophristic
-editor: Aline-Priscillia Messi
+writer: "Stefan Pophristic"
+editor: "Aline-Priscillia Messi"
 last_modified_date: 2026-10-08
 nav_order: 6
 has_children: true

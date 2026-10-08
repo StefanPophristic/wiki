@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MEG Analyses
+title: "MEG Analyses"
 nav_order: 8
 has_children: true
 section: "MEG"

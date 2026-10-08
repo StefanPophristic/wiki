@@ -3,8 +3,8 @@ layout: default
 title: "Decoding"
 parent: "MEG Analyses"
 nav_order: 3
-writer: Simone Krogh
-editor: Leo Niekierken
+writer: "Simone Krogh"
+editor: "Leo Niekierken"
 has_children: false
 section: "MEG"
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: "Representational Similarity Analysis"
 parent: "MEG Analyses"
-writer: Aline-Priscillia Messi
+writer: "Aline-Priscillia Messi"
 nav_order: 5
 has_children: true
 section: "MEG"

@@ -4,20 +4,20 @@ title: "Temporal Filtering"
 parent: "2. Filtering"
 grand_parent: "Preprocessing"
 nav_order: 2
+writer: "Aline-Priscillia Messi"
+editor: "Boxuan Li"
 mathjax: true
 has_children: true
 section: "MEG"
 ---
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
-1.  TOC {:toc}
+1. TOC
+{:toc}
 
 ------------------------------------------------------------------------
-
-<!--- Note to editor: please update the links with the correct targets :D --->
 
 # Temporal filtering
 

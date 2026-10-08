@@ -1,8 +1,10 @@
 ---
 layout: default
-title: "Spatial Filtering"
+title: "Spatial Filtering (PCA)"
 parent: "2. Filtering"
 grand_parent: "Preprocessing"
+writer: "Aline-Priscillia Messi"
+editor: "Simone Krogh"
 nav_order: 3
 mathjax: true
 has_children: false
@@ -10,10 +12,10 @@ section: "MEG"
 ---
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
-1.  TOC {:toc}
+1. TOC
+{:toc}
 
 ------------------------------------------------------------------------
 
