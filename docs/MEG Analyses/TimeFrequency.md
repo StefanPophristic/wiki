@@ -3,6 +3,8 @@ layout: default
 title: Time Frequency Analyses
 nav_order: 5
 parent: MEG Analyses
+writer: Stefan Pophristic
+editor: Aline-Priscillia Messi
 has_children: false
 section: "MEG"
 ---

@@ -4,6 +4,7 @@ title: "Spatiotemporal clustering test"
 parent: "MEG Analyses"
 nav_order: 1
 has_children: false
+writer: Boxuan Li
 section: "MEG"
 ---
 

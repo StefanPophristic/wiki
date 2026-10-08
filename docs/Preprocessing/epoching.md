@@ -3,6 +3,8 @@ layout: default
 title: "4. Epoching"
 parent: "Preprocessing"
 nav_order: 4
+writer: Simone Krogh
+editor: Boxuan Li
 has_children: false
 section: "MEG"
 ---

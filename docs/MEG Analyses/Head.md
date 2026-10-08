@@ -14,6 +14,9 @@ In this section we will describe and document some of the most commonly used ana
 ## Linear Regression Models
 ## fROI and the Tarkiainen Localizer
 
+# Representational Similarity Analysis
+Section tbd
+
 # Decoding
 
 Put very simply, decoding refers to the process of predicting the stimuli presented to participants. This is done by training a classifier (more on this below) to discriminate between the different categories using one set of neural data and testing its performance on a (typically different) set of neural data.

@@ -37,7 +37,7 @@ events:
         tutorial: no
   - year: 2025
     season: Fall
-    organizer:
+    organizer: Stefan Pophristic and Aline-Priscillia Messi
     sessions:
       - date: 2025-10-08
         name: Using Illustrator for figures and posters
@@ -65,7 +65,7 @@ events:
         tutorial: TBD
   - year: 2025
     season: Summer
-    organizer:
+    organizer: Stefan Pophristic and Aline-Priscillia Messi
     sessions:
       - date: 2025-05-19
         name: Data Troubleshooting
@@ -79,3 +79,23 @@ events:
         name: RSA
         presenter: Aline-Priscillia Messi
         tutorial: Yes
+  - year: 2025
+    season: Spring
+    organizer: Marianne Azar, Stefan Pophristic and Aline-Priscillia Messi
+    sessions:
+      - date: 2025-03-05
+        name: Introduction to the Wiki
+        presenter: Stefan Pophristic
+        tutorial: No
+      - date: 2025-03-14
+        name: Methods documentation planning
+        presenter: Marianne Azar, Stefan Pophristic and Aline-Priscillia Messi
+        tutorial: No
+      - date: 2025-04-02
+        name: Preprocessing roundtable
+        presenter: Aline-Priscillia Messi
+        tutorial: No
+      - date: 2025-05-13
+        name: MEG basics and Methods topic selection
+        presenter: Aline-Priscillia Messi and Stefan Pophristic
+        tutorial: No

@@ -1,0 +1,13 @@
+<div class="custom-page-footer fs-2 text-grey-dk-000 mt-4 pt-2 border-top-single">
+    {% if page.writer %}
+    <p class="mb-1"><strong>Writer:</strong> {{ page.writer }}</p>
+    {% endif %}
+
+    {% if page.editor %}
+    <p class="mb-1"><strong>Editor:</strong> {{ page.editor }}</p>
+    {% endif %}
+
+    {% if page.last_modified_date %}
+    <p class="mb-1"><strong>Last edited:</strong> {{ page.last_modified_date | date: "%B %d, %Y" }}</p>
+    {% endif %}
+</div>

@@ -2,6 +2,8 @@
 layout: default
 title: "Canonical Correlation Analysis"
 parent: "MEG Analyses"
+writer: Leo Niekierken
+editor: Aline-Priscillia Messi
 nav_order: 5
 has_children: true
 section: "MEG"

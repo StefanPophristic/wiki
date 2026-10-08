@@ -3,6 +3,8 @@ layout: default
 title: "2. kit2fiff"
 parent: "1. Import Data"
 grand_parent: "Preprocessing"
+writer: tbd
+editor: tbd
 nav_order: 2
 has_children: true
 section: "MEG"

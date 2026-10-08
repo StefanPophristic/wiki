@@ -3,6 +3,8 @@ layout: default
 title: "3. ICA"
 parent: "Preprocessing"
 nav_order: 3
+writer: Stefan Pophristic
+editor: Leo Niekierken
 has_children: false
 section: "MEG"
 ---
