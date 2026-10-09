@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Behavioral preprocessing
+title: Behavioral Preprocessing
 parent: Behavioral Analyses
 nav_order: 1
 has_children: False
@@ -33,7 +33,8 @@ This page is the results of a larger behavioral analyses round-table from April 
 - Be suspicious if more than 15% of participants => if running online then Prolific can be suspicious/sketchy
 - Can be task dependent! If the task is not an attention check then check the relevant literature
 - Applies if the task is a cognitive evaluation of something vs making sure
-- !!!Look at behavioral when seeing if to exclude an MEG participant!!
+
+**!!!Look at behavioral when seeing if to exclude an MEG participant!!**
 
 ### Individual trials (by item)
 #### Hard cutoff
@@ -42,7 +43,7 @@ This page is the results of a larger behavioral analyses round-table from April 
 - Upper bound: 4-5s
 - Upper bounds vary a lot by task and by the attention check that is being used!! Check the mean reaction times in the literature for the task that you have chosen and language
 - Very important!!
-- (though see https://quantling.org/~hbaayen/publications/BaayenMilin2010.pdf for 5ms - 500ms)
+- (though see [Baayen & Milin (2010)](https://quantling.org/~hbaayen/publications/BaayenMilin2010.pdf) for 5ms - 500ms)
 
 #### Relative cutoff
 - Reject trials that are 3SD away from the participant mean reaction time (standard)
@@ -50,7 +51,7 @@ This page is the results of a larger behavioral analyses round-table from April 
 - Citations for Cutoff considerations:
   - Zandt, T. (2002). Analysis of response time distributions. In J. Wixted & H. Pashler (Eds.), Stevens handbook of experimental psychology, volume 4: Methodology in experimental psychology (pp. 461516). New York: Wiley.;
   - Ratclff, R. (1993). Methods for dealing with reaction time outliers. Psychological Bulletin, 114, 510532;
-  - https://quantling.org/~hbaayen/publications/BaayenMilin2010.pdf
+  - [Baayen & Milin (2010)](https://quantling.org/~hbaayen/publications/BaayenMilin2010.pdf)
 - Can also do a by item cutoff:
 -   Across all participants to reject items that have a weird behavior
 -   Can be prone to over-cleaning so not recommended
@@ -60,7 +61,8 @@ This page is the results of a larger behavioral analyses round-table from April 
 2. Hard cutoffs
 3. By participant exclusions (outliers)
 4. By item
-*!!!Order of hard cutoff vs relative cutoff matters!!!*
+
+**!!!Order of hard cutoff vs relative cutoff matters!!!**
 Otherwise you are getting rid of things that can influence each other!!!
 
 ### Data visualization and normality
@@ -92,6 +94,5 @@ Otherwise you are getting rid of things that can influence each other!!!
   - Removes the absolute difference between participants; is better to standardize the data so that we can have an ‘absolute’ measure of their performance
   - This makes it easier to do comparisons that are percentage-based for the items across participants
 - Linear transformation so doesn’t matter
-- To do: add specific variables that are logged and zscored for this section
 
-https://lindeloev.github.io/shiny-rt/ → good link for wiki
+[shiny-rt](https://lindeloev.github.io/shiny-rt/) → good link for wiki
