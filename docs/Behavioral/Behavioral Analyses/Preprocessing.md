@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Regression Models
+title: Behavioral preprocessing
 parent: Behavioral Analyses
 nav_order: 1
 has_children: False
@@ -51,17 +51,17 @@ This page is the results of a larger behavioral analyses round-table from April 
   - Zandt, T. (2002). Analysis of response time distributions. In J. Wixted & H. Pashler (Eds.), Stevens handbook of experimental psychology, volume 4: Methodology in experimental psychology (pp. 461516). New York: Wiley.;
   - Ratclff, R. (1993). Methods for dealing with reaction time outliers. Psychological Bulletin, 114, 510532;
   - https://quantling.org/~hbaayen/publications/BaayenMilin2010.pdf
-- Can also do a by item cutoff
-- Across all participants to reject items that have a weird behavior
-- Can be prone to over-cleaning so not recommended
+- Can also do a by item cutoff:
+-   Across all participants to reject items that have a weird behavior
+-   Can be prone to over-cleaning so not recommended
 
 ### Order of operations
-- Participant accuracy exclusion
-- Hard cutoffs
-- By participant exclusions (outliers)
-- By item
-- !!!Order of hard cutoff vs relative cutoff matters!!!
-- Otherwise you are getting rid of things that can influence each other!!!
+1. Participant accuracy exclusion
+2. Hard cutoffs
+3. By participant exclusions (outliers)
+4. By item
+*!!!Order of hard cutoff vs relative cutoff matters!!!*
+Otherwise you are getting rid of things that can influence each other!!!
 
 ### Data visualization and normality
 #### Check the distribution of your data
