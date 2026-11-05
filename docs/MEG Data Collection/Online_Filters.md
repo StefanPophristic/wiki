@@ -13,13 +13,13 @@ Since the data that the MEG machine picks up on is inherently a mix of useable d
 
 The magnetic an MEG sensor records can be transformed into a set of sine/cosine waves that vary in amplitude and frequency. Since we know that only certain frequencies reflect neural activity that we care about, we can filter out the sine/cosine waves at other frequencies. The typical bands of frequencies studied in neurolinguistics are:
 
-| Wave Band | Frequency | Column 3 |
-| :--- | :--- | :--- |
-| Gamma | 30-100 Hz | Row 1, Data 3 |
-| Beta  | 12-30 Hz | Row 2, Data 3 |
-| Alpha | 8-12 Hz | Row 3, Data 3 |
-| Theta | 4-8 Hz | Row 4, Data 3 |
-| Delta | 0.5-4 Hz | Row 5, Data 3 |
+| Wave Band | Frequency |
+| :--- | :--- |
+| Gamma | 30-100 Hz |
+| Beta  | 12-30 Hz |
+| Alpha | 8-12 Hz |
+| Theta | 4-8 Hz |
+| Delta | 0.5-4 Hz |
 
 To get rid of waves with other frequencies we apply a low and high pass filter. A low-pass filter allows waves of lower frequencies to "pass", filtering out high frequencies. The high-pass filter does the opposite. So a high-pass filter of 0.1 Hz allows all waves with frequency of ≥ 0.1 Hz to pass. A low-pass filter of 200 Hz allows all waves with a frequency of ≤200 Hz to pass. 
 

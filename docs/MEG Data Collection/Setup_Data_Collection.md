@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Data Collection Procedure
-nav_order: 5
+title: Setup for Data Collection
+nav_order: 1
 has_children: true
 parent: "MEG Data Collection"
 section: "MEG"
