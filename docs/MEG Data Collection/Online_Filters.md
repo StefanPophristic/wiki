@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Online Filters
-nav_order: 5
+nav_order: 3
 has_children: true
 parent: "MEG Data Collection"
 section: "MEG"
@@ -37,7 +37,4 @@ Some past lab papers and their frequencies are given below.
 
 # MEG 160
 
-Online filters are set in MEG160. They can either be set under `Sensor Control > HPF/LPF` (1) or under a preset loaded from `Condition Library` (2).
-
-<img src="../../images/MEG_Data_Collection/MEG160_Filters.png" alt="MEG160 Filter Setting" style="width: 50%; height: auto;">
-
+**To see how to set up online filters in MEG160, go to [Online Filters](Online_Filters.md#background)**

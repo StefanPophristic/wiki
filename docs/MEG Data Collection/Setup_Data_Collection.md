@@ -12,56 +12,56 @@ section: "MEG"
 ## Turning everything on (in order)
 - Remote control (for the projector) first
 
-<img src="../../images/MEG_Data_Collection/0_turn_on_projector.jpg" alt="turn on the projector" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/0_turn_on_projector.jpg" alt="turn on the projector" style="width: 50%; height: auto;">
 
 
-<img src="../../images/MEG_Data_Collection/1_the_projector.jpg" alt="the projector" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/1_the_projector.jpg" alt="the projector" style="width: 50%; height: auto;">
 
 
 - Exhaust fan off (light switch near helium refill room)
 
-<img src="../../images/MEG_Data_Collection/2_exhaust_fan.jpg" alt="exhaust fan off" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/2_exhaust_fan.jpg" alt="exhaust fan off" style="width: 50%; height: auto;">
 
 - Magnetically shielded room lights (green button) -> It's possible to adjust the lights. We generally keep it in the middle when they're getting set up, but once the experiment starts, we dim it a bit
 
-<img src="../../images/MEG_Data_Collection/3_MSR_light.jpg" alt="MSR light" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/3_MSR_light.jpg" alt="MSR light" style="width: 50%; height: auto;">
 
 - Active shielding (black button w green dot, hold until green) - The same to turn it off- hold until light turns off
 
-<img src="../../images/MEG_Data_Collection/4_active_shielding.jpg" alt="active shielding" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/4_active_shielding.jpg" alt="active shielding" style="width: 50%; height: auto;">
 
-<img src="../../images/MEG_Data_Collection/5_active_shieding_button.jpg" alt="active shielding button" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/5_active_shieding_button.jpg" alt="active shielding button" style="width: 50%; height: auto;">
 
 - The stimTracker is linked to the button box where the participants gives the answer - do not touch!
 
-<img src="../../images/MEG_Data_Collection/6_stimtracker.jpg" alt="stimTracker" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/6_stimtracker.jpg" alt="stimTracker" style="width: 50%; height: auto;">
 
 
 - Check if the data transfer switch (green box) is turned to MAC (for the psychopy software) or to PC (for the Presentation software)
 
-<img src="../../images/MEG_Data_Collection/7_data_transfer_switch.jpg" alt="data transfer switch" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/7_data_transfer_switch.jpg" alt="data transfer switch" style="width: 50%; height: auto;">
 
 
 - Turn media box on (black box w smooth button, press until hear turn on - turns on tv and mic)
 
-<img src="../../images/MEG_Data_Collection/8_media_box.jpg" alt="media box" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/8_media_box.jpg" alt="media box" style="width: 50%; height: auto;">
 
 - Trigger box on mac when using psychopy
 
-<img src="../../images/MEG_Data_Collection/9_trigger_box.jpg" alt="trigger box" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/9_trigger_box.jpg" alt="trigger box" style="width: 50%; height: auto;">
 
 
 - Make sure helium fill is off when we're recording - remember to turn it back on when we're done recording
 
-<img src="../../images/MEG_Data_Collection/10_helium_fill.jpg" alt="helium fill" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/10_helium_fill.jpg" alt="helium fill" style="width: 50%; height: auto;">
 
 - Turn on marker box in machine (big gray box w wires for each marker color)
 
-<img src="../../images/MEG_Data_Collection/11_marker_box.jpg" alt="marker box" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/11_marker_box.jpg" alt="marker box" style="width: 50%; height: auto;">
 
 - Open FastScanII in Jeff's office (turn on FastScan box, will hear chime when online)
 
-<img src="../../images/MEG_Data_Collection/12_fastscan.jpg" alt="fastscan" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/12_fastscan.jpg" alt="fastscan" style="width: 50%; height: auto;">
 
 ## Eyelink software
 - Leftmost dell monitor on (press box -> on)
@@ -75,7 +75,7 @@ on eye tracker
     - This creates a file for the R number
     - This allows us to just hit “record” later
 
-<img src="../../images/MEG_Data_Collection/13_eyelink.jpg" alt="eyelink" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/13_eyelink.jpg" alt="eyelink" style="width: 50%; height: auto;">
 
 ## Setting up experiment
 On main dell computer (the one that records data, not eye tracking one)
@@ -128,7 +128,7 @@ On the computer that saves participant information (not the one in jeff's office
 - Get consent form, DOB, R-number -> file away
 - Draw dots on head using the template:
 
-<img src="../../images/MEG_Data_Collection/fiducials.png" alt="fiducials" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/fiducials.png" alt="fiducials" style="width: 50%; height: auto;">
 
 - This image shows where the nasion and tragi are located.
 - The left (red) and right (yellow) markers should be drawn using a makeup pencil approximately 1 centimeter away from the tragus, towards the frontal side of the participant. The center forehead (blue), left forehead (white), and right forehead (green/black) markers can all be drawn using the stencil template found in the office, after aligning the stencil with the nasion. (Picture needed)
@@ -171,7 +171,7 @@ head pillow goes in pillowcase, side pillows go in tissues
 ### IS THE DOOR CLOSED?? CLOSE IT!! then, and ONLY then, lock it! Do this before starting acquisition
 Example on how to close the door properly (push the black button):
 
-<img src="../../images/MEG_Data_Collection/14_seal_door.jpg" alt="seal the door" style="width: 50%; height: auto;">
+<img src="../../images/Setup_for_DataCollection/14_seal_door.jpg" alt="seal the door" style="width: 50%; height: auto;">
 
 ### Running a participant     
 On main dell computer (the one that records data, not eye tracking one)
