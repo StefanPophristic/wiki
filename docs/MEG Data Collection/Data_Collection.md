@@ -170,3 +170,26 @@ There are a couple possibilities:
 - One of the marker coils stopped working
 
 Regardless of what the issue is, if you have at least 3 markers that are properly estimated—that suffices to reconstruct the position of the participants head in space. 
+
+
+## Noisy Signal
+
+It is helpful to be able to tell two potential sources of noise during your recording: metal on the participant and a radio-burst. 
+
+**Metal**: If the participant has metal on their body (typically dental work), the data will look incredibly noisy. For example, at a Y-Scale of 8192 A/D, the data may look like this: 
+
+<img src="../../images/Data_Collection/metal.png" alt="MEG160 acquisition metal signal" style="width: 75%; height: auto;">
+
+You can tell that this is metal as opposed to a noise burst, as there is no apparent systematicity in the very large signal. If you believe that this may be metal due to dental work, you can ask your participant to open and close their mouth a few times. if them opening their mouth massively increases the noisy-signal amplitude, then the participant most likely has metal in their mouth. 
+
+If the noisy signal is due to metal, you should not run your participant—the data will most likely be unusable. 
+
+**Radio Burst**: Radio-bursts typically occur when one of the janitors in our part of the building use their walkie-talkie. They look like this:
+
+<img src="../../images/Data_Collection/radioburst_1.png" alt="MEG160 acquisition metal signal" style="width: 75%; height: auto;">
+
+<img src="../../images/Data_Collection/radioburst_2.png" alt="MEG160 acquisition metal signal" style="width: 75%; height: auto;">
+
+You can tell that this is a radio-burst as opposed to metal since there is a noticeable pattern in the noise—the frequencies of the radio signal interrupting the recording. 
+
+If the noisy signal is due to a radio-burst, you should stop the recording, unlock the machine, and re-autotune it. You can then proceed with the recording. 
